@@ -1,3 +1,21 @@
 baseURL = "https://darkowlzz.github.io/"
 languageCode = "en-us"
 title = "darkowlzz"
+
+[[menu.main]]
+    name = "github"
+    identifier = "github"
+    weight = -110
+    url = "https://github.com/darkowlzz"
+
+[[menu.main]]
+    name = "twitter"
+    identifier = "twitter"
+    weight = -100
+    url = "https://twitter.com/darkowlzz"
+
+[[menu.main]]
+    name = "old logs"
+    identifier = "oldlogs"
+    weight = -90
+    url = "https://codingowl.tumblr.com"
