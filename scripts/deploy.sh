@@ -34,10 +34,10 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
   #   echo "Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch"
   #   exit 0
   # else
-    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-      echo "Travis should not deploy from pull requests"
-      exit 0
-    else
+    # if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+    #   echo "Travis should not deploy from pull requests"
+    #   exit 0
+    # else
       # switch both git and https protocols as we don't know which travis
       # is using today (it changed!)
       REPO=${REPO/git:\/\/github.com\//git@github.com:}
@@ -48,7 +48,7 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       ssh-add $SSH_KEY
       git config --global user.name "$GIT_NAME"
       git config --global user.email "$GIT_EMAIL"
-    fi
+    # fi
   # fi
 fi
  
