@@ -1,6 +1,7 @@
 baseURL = "https://darkowlzz.github.io/"
 languageCode = "en-us"
 title = "darkowlzz"
+googleAnalytics = "UA-63771901-5"
 
 [[menu.main]]
     name = "github"
