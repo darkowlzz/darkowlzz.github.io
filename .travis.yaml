@@ -1,0 +1,26 @@
+language: go
+
+go:
+  - "1.7.1"
+
+env:
+  global:
+    - SSH_KEY="darkowlzz.github.io"
+    - GIT_NAME="darkowlzz"
+    - GIT_EMAIL="me@darkowlzz.space"
+    - SOURCE_DIR="public"
+    - DEPLOY_BRANCH="source"
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_358bf1b07723_key -iv $encrypted_358bf1b07723_iv -in darkowlzz.github.io.enc -out ~\/.ssh/darkowlzz.github.io -d
+
+before_script:
+  - go get github.com/kardianos/govendor
+  - govendor get github.com/gohugoio/hugo
+
+script:
+  - git submodule update --init
+  - hugo --theme=after-dark
+
+after_success:
+  - ./scripts/deploy.sh
