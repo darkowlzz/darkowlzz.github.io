@@ -10,7 +10,7 @@ googleAnalytics = "UA-63771901-5"
     url = "https://github.com/darkowlzz"
 
 [[menu.main]]
-    name = "twitter"
+    name = "Twitter"
     identifier = "twitter"
     weight = -100
     url = "https://twitter.com/darkowlzz"
