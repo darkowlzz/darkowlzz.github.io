@@ -1,7 +1,7 @@
 language: go
 
 go:
-  - 1.7.1
+  - 1.8.3
 
 env:
   global:
@@ -17,11 +17,11 @@ before_install:
 install: true
 
 before_script:
-  - go get github.com/kardianos/govendor
-  - govendor get github.com/gohugoio/hugo
+  - wget -O ~/hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.24.1/hugo_0.24.1_Linux-64bit.tar.gz
+  - tar -zxvf ~/hugo.tar.gz -C ~/
 
 script:
-  - hugo --theme=after-dark
+  - ~/hugo --theme=after-dark
 
 after_success:
   - ./scripts/deploy.sh
