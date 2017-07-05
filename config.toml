@@ -3,6 +3,9 @@ languageCode = "en-us"
 title = "darkowlzz"
 googleAnalytics = "UA-63771901-5"
 
+[params]
+    site_title = "darkowlzz"
+
 [[menu.main]]
     name = "github"
     identifier = "github"
