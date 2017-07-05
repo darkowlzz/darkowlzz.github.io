@@ -4,28 +4,30 @@
     <meta name="generator" content="Hugo 0.24.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | darkowlzz</title>
-    <meta name="description" content="">
+    <title>Securing Custom Deployments via Travis CI | darkowlzz</title>
+    <meta name="description" content="Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
+Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.">
     <meta name="keywords" content="">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/" />
+    <meta property="og:title" content="Securing Custom Deployments via Travis CI" />
+<meta property="og:description" content="Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
+Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/securing-custom-deployments-via-travis-ci/" />
 
 
 
-<meta property="og:updated_time" content="2017-07-05T17:30:54&#43;05:30"/>
+<meta property="article:published_time" content="2017-07-05T17:30:54&#43;05:30"/>
+<meta property="article:modified_time" content="2017-07-05T17:30:54&#43;05:30"/>
+
 
 
 
@@ -53,9 +55,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/post/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/securing-custom-deployments-via-travis-ci/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -134,32 +134,28 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="" href="https://github.com/darkowlzz"><span itemprop="name">github</span></a>
-    
-      <a itemprop="url" class="" href="https://twitter.com/darkowlzz"><span itemprop="name">twitter</span></a>
-    
-      <a itemprop="url" class="" href="https://codingowl.tumblr.com"><span itemprop="name">old logs</span></a>
-    
-  </nav>
-
-
 </header>
     <main>
-  <header>
-    <h1>Posts</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/securing-custom-deployments-via-travis-ci/">Securing Custom Deployments via Travis CI</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="Securing Custom Deployments via Travis CI">
+<meta itemprop="description" content="Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
+Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.">
+
+
+<meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30" />
+<meta itemprop="wordCount" content="514">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <header>
+      <h1 itemprop="headline">Securing Custom Deployments via Travis CI</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
@@ -170,69 +166,150 @@ article [itemprop="description"] {
 
   Published: <time datetime="2017-07-05T17:30:54&#43;05:30">5 Jul, 2017</time>
 
+
+      </p>
+    </header>
+    
+    
+
+    <div itemprop="articleBody">
+      
+
+<ul>
+<li>Custom Deployment</li>
+<li>Encrypted Secrets in Build Environment</li>
+<li>Limiting Deployments From Specific Branches</li>
+</ul>
+
+<p><a href="https://travis-ci.org/">Travis CI - Test and Deploy with Confidence</a>. DEPLOY.
+<strong>D E P L O Y</strong>.</p>
+
+<p>Travis CI can be used as a publicly hosted deployment system with inbuilt
+<a href="https://docs.travis-ci.com/user/deployment/">support</a> for deployments to
+various providers. There are well documented guides about doing the same. But
+once in a while, one might end up using some service that&rsquo;s not supported by Travis CI
+or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for
+the provider.</p>
+
+<h1 id="custom-deployments">Custom Deployments</h1>
+
+<p>Travis CI provides ways of run scripts, from the code repo, which can be used
+as deployment scripts. Script execution commands can be added to any of the
+<a href="https://docs.travis-ci.com/user/customizing-the-build/">build stages</a>,
+depending on the requirements. For a deployment script, <code>after_success</code> is a
+good place to run them.</p>
+
+<pre><code class="language-yml"># .travis.yml
+...
+after_success:
+    - ./scripts/deploy.sh
+...
+</code></pre>
+
+<blockquote>
+<p><strong>The exit code of <code>after_success</code>, <code>after_failure</code>, <code>after_script</code> and
+subsequent stages do not affect the build result. However, if one of these
+stages times out, the build is marked as a failure.</strong></p>
+</blockquote>
+
+<h1 id="encrypted-secrets-in-build-environment">Encrypted Secrets in Build Environment</h1>
+
+<p>When doing custom deployments, the secrets must be stored in environment
+variables in encrypted form. Encrypted env vars look like this in .travis.yml
+file:</p>
+
+<pre><code class="language-yml"># .travis.yml
+env:
+  global:
+    - APP_NAME=&quot;foo&quot;
+    - secure: &quot;N79ZQG6jUTP5o0YSc1dTtb02PV+1j6sjM/DlvtCEcdaiPiEH&quot;
+    - secure: &quot;L08rVW1wuAz5P4j3yiAJkxG0Dog5cr8YSPzCCnguDrBy7Ok5&quot;
+</code></pre>
+
+<p>Even the variable names are not shown. To create encrypted variables, use <code>travis</code>
+cli. Refer their <a href="https://docs.travis-ci.com/user/encryption-keys">Encryption Key Guide</a>.</p>
+
+<p>Sometimes, there&rsquo;s need to encrypt certain files. They have another guide for
+that, <a href="https://docs.travis-ci.com/user/encrypting-files/">Encrypting Files Guide</a>.
+Encrypting files generate a new file with encrypted content. The decryption key
+is saved in travis, under the specific repo.</p>
+
+<p>The encrypted keys and files can only be decrypted when there&rsquo;s a build by the
+owner of the repo. So, a build of a PR by a contributor, would fail at decryption
+stage because travis has no key associated with that user.</p>
+
+<p>Also refer <a href="https://docs.travis-ci.com/user/best-practices-security/">Travis CI: Best Practices in Securing Your Data</a>.</p>
+
+<h1 id="limiting-deployments-from-specific-branches">Limiting Deployments From Specific Branches</h1>
+
+<p>Deployments require secrets. Deployments triggered by PR from contributors would
+fail due to no decryption key. Hence, it&rsquo;s safe. Other&rsquo;s can&rsquo;t deploy. But in
+addition to that, the build script can be made a little smarter and exit when
+certain conditions are met.</p>
+
+<p>Deployment is generally not intended when:</p>
+
+<ul>
+<li>it&rsquo;s a PR</li>
+<li>not master branch or any specific production branch</li>
+</ul>
+
+<p>For such scenarios, some conditions in the deployment script could be used.</p>
+
+<pre><code>if [ &quot;$TRAVIS_BRANCH&quot; != &quot;$DEPLOY_BRANCH&quot; ]; then
+    echo &quot;Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch&quot;
+    exit 0
+else
+    if [ &quot;$TRAVIS_PULL_REQUEST&quot; != &quot;false&quot; ]; then
+        echo &quot;Travis should not deploy from pull requests&quot;
+        exit 0
+    else
+        # actually deploy
+        .....
+        .....
+    fi
+fi
+</code></pre>
+
+<p>This would ensure that deployments are not triggered when a new branch is built
+and when a PR is sent. Preventing accidental deployments from branches by the
+repo owner.</p>
+
+<p>This site has CI/CD setup on travis and deploys to github pages at every commit
+to the <code>source</code> branch. Refer <a href="https://github.com/darkowlzz/darkowlzz.github.io/blob/source/.travis.yml"><code>.travis.yml</code></a>
+and <a href="https://github.com/darkowlzz/darkowlzz.github.io/blob/source/scripts/deploy.sh"><code>deploy.sh</code></a>
+files for working examples. They are inspired by work of
+<a href="https://github.com/rcoedo">rcoedo</a> and a sort of
+<a href="https://haruair.github.io/post/setup-hugo-blog-on-github-pages-with-travis-ci/">tutorial</a>
+by <a href="https://github.com/haruair">haruair</a>. 🦉</p>
+
+    </div>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author"></span>
+    
+  
+  <time datetime="2017-07-05T17:30:54&#43;05:30">
+    5 Jul, 2017
+  </time>
+  
+  
+  using <span itemprop="wordCount">514</span> words.
 </p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
-Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.
-  </div>
-  
-    <p><a itemprop="url" href="/post/securing-custom-deployments-via-travis-ci/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/learning-hugo/">Learning Hugo</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>1 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+      
 
-  Published: <time datetime="2017-06-28T16:53:59&#43;05:30">28 Jun, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This site is just a playground to learn hugo, how it works and the workflow. Also, since the generated site is just a collection of static web pages, this site is hosted on github as github pages and gets automatically deployed at every commit to the master branch.
-The hugo project for this site is at the source branch. Every commit to this branch triggers a travis build, where the new pages are generated and with some custom deployment shell commands, the generated pages are committed to master branch.
-  </div>
-  
-    <p><a itemprop="url" href="/post/learning-hugo/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-06-28T16:53:59&#43;05:30">
-  <meta itemprop="dateModified" content="2017-06-28T16:53:59&#43;05:30">
-  
-</article>
 
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
   
   <p class="muted">
     This page was generated using

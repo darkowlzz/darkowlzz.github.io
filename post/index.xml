@@ -6,10 +6,20 @@
     <description>Recent content in Posts on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Jun 2017 16:53:59 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jul 2017 17:30:54 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Securing Custom Deployments via Travis CI</title>
+      <link>https://darkowlzz.github.io/post/securing-custom-deployments-via-travis-ci/</link>
+      <pubDate>Wed, 05 Jul 2017 17:30:54 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/securing-custom-deployments-via-travis-ci/</guid>
+      <description>Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
+Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&amp;rsquo;s not supported by Travis CI or even a specific feature that&amp;rsquo;s not supported, although there&amp;rsquo;s support for the provider.</description>
+    </item>
     
     <item>
       <title>Learning Hugo</title>
