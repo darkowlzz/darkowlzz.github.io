@@ -6,10 +6,21 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Jul 2017 17:30:54 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jul 2017 13:48:53 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minikube Config</title>
+      <link>https://darkowlzz.github.io/post/minikube-config/</link>
+      <pubDate>Mon, 24 Jul 2017 13:48:53 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/minikube-config/</guid>
+      <description>Minikube is a kubernetes(k8s) project to enable running single node k8s cluster locally inside a VM, which can be used by developers to prepare their apps for k8s in development phase. For more info, refer their github project.
+Minikube starts with some sane default VM configs for any modern machine.
+DefaultMemory = 2048 DefaultCPUS = 2 DefaultDiskSize = &amp;quot;20g&amp;quot; MinimumDiskSizeMB = 2000 DefaultVMDriver = &amp;quot;virtualbox&amp;quot;  Which is fine for most of the time.</description>
+    </item>
     
     <item>
       <title>Securing Custom Deployments via Travis CI</title>
