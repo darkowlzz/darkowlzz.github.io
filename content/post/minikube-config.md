@@ -67,5 +67,5 @@ command lets you change the config without manually editing the config file.
 
 ```
 $ minikube config set memory 1024
-$ minikube config set disk-size 10000
+$ minikube config set disk-size 2000MB
 ```
