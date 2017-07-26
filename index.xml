@@ -6,10 +6,22 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Jul 2017 13:48:53 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jul 2017 22:09:57 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Helm Chart Config Preview</title>
+      <link>https://darkowlzz.github.io/post/helm-chart-config-preview/</link>
+      <pubDate>Wed, 26 Jul 2017 22:09:57 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/helm-chart-config-preview/</guid>
+      <description>Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
+helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
+values.yaml of mariadb chart:
+--- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .</description>
+    </item>
     
     <item>
       <title>Minikube Config</title>

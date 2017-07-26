@@ -4,28 +4,34 @@
     <meta name="generator" content="Hugo 0.24.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | darkowlzz</title>
-    <meta name="description" content="">
+    <title>Helm Chart Config Preview | darkowlzz</title>
+    <meta name="description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
+helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
+values.yaml of mariadb chart:
+--- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
     <meta name="keywords" content="">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/" />
+    <meta property="og:title" content="Helm Chart Config Preview" />
+<meta property="og:description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
+helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
+values.yaml of mariadb chart:
+--- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/helm-chart-config-preview/" />
 
 
 
-<meta property="og:updated_time" content="2017-07-26T22:09:57&#43;05:30"/>
+<meta property="article:published_time" content="2017-07-26T22:09:57&#43;05:30"/>
+<meta property="article:modified_time" content="2017-07-26T22:09:57&#43;05:30"/>
+
 
 
 
@@ -53,9 +59,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/post/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/helm-chart-config-preview/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -134,32 +138,30 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="" href="https://github.com/darkowlzz"><span itemprop="name">github</span></a>
-    
-      <a itemprop="url" class="" href="https://twitter.com/darkowlzz"><span itemprop="name">twitter</span></a>
-    
-      <a itemprop="url" class="" href="https://codingowl.tumblr.com"><span itemprop="name">old logs</span></a>
-    
-  </nav>
-
-
 </header>
     <main>
-  <header>
-    <h1>Posts</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/helm-chart-config-preview/">Helm Chart Config Preview</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="Helm Chart Config Preview">
+<meta itemprop="description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
+helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
+values.yaml of mariadb chart:
+--- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
+
+
+<meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30" />
+<meta itemprop="wordCount" content="233">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <header>
+      <h1 itemprop="headline">Helm Chart Config Preview</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
@@ -170,142 +172,118 @@ article [itemprop="description"] {
 
   Published: <time datetime="2017-07-26T22:09:57&#43;05:30">26 Jul, 2017</time>
 
+
+      </p>
+    </header>
+    
+    
+
+    <div itemprop="articleBody">
+      <p><a href="https://github.com/kubernetes/helm">Helm</a> is a kubernetes(k8s) package manager
+and it enables downloading k8s charts and installing them in k8s cluster. Charts
+are configured with default values, which can be
+<a href="https://docs.helm.sh/using_helm/#customizing-the-chart-before-installing">customized</a>
+before installation.</p>
+
+<p><code>helm inspect [chart]</code> shows the <code>Chart.yaml</code> and <code>values.yaml</code> content of a
+given chart. The configurations are stored in <code>values.yaml</code> and
+<code>heml inspect values [chart]</code> shows only the content of <code>values.yaml</code>.</p>
+
+<p><code>values.yaml</code> of mariadb chart:</p>
+
+<pre><code>---
+image: bitnami/mariadb:10.1.23-r2
+
+## Specify an imagePullPolicy (Required)
+imagePullPolicy: IfNotPresent
+
+## Specify password for root user
+# mariadbRootPassword:
+
+## Create a database user
+# mariadbUser:
+# mariadbPassword:
+
+## Create a database
+# mariadbDatabase:
+...
+</code></pre>
+
+<p><a href="https://docs.helm.sh/using_helm/#customizing-the-chart-before-installing">Customizing the Chart Before Installing</a>
+describes how these configurations can be customized by passing a file name or
+<code>--set</code> flags. But this would not preview the set configurations and install
+immediately. Or fail if there were any unexpected values found in the
+configuration.</p>
+
+<p>To preview the customized configuration, helm dry-run and debug execution modes
+can be coupled. This shows the resulting configuration and since it&rsquo;s a dry-run,
+it won&rsquo;t result in actual installation.</p>
+
+<pre><code>$ helm install --dry-run --debug stable/mariadb --set mariadbDatabase=somedbname
+...
+NAME:   goodly-quoll
+REVISION: 1
+RELEASED: Wed Jul 26 22:31:22 2017
+CHART: mariadb-0.6.3
+USER-SUPPLIED VALUES:
+mariadbDatabase: somedbname
+
+COMPUTED VALUES:
+image: bitnami/mariadb:10.1.23-r2
+imagePullPolicy: IfNotPresent
+mariadbDatabase: somedbname
+...
+</code></pre>
+
+<p><strong>NOTE</strong>: dry-run result doesn&rsquo;t mean the configuration is correct. It&rsquo;s just a
+preview of the passed configuration parsed by helm. If there&rsquo;s any
+misconfiguration, the installation would fail.</p>
+
+    </div>
+    
+      <article>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkowlzz-space';
+    var disqus_identifier = 'https:\/\/darkowlzz.github.io\/post\/helm-chart-config-preview\/';
+    var disqus_title = 'Helm Chart Config Preview';
+    var disqus_url = 'https:\/\/darkowlzz.github.io\/post\/helm-chart-config-preview\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author"></span>
+    
+  
+  <time datetime="2017-07-26T22:09:57&#43;05:30">
+    26 Jul, 2017
+  </time>
+  
+  
+  using <span itemprop="wordCount">233</span> words.
 </p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
-helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
-  </div>
-  
-    <p><a itemprop="url" href="/post/helm-chart-config-preview/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-26T22:09:57&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/minikube-config/">Minikube Config</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+      
 
-  Published: <time datetime="2017-07-24T13:48:53&#43;05:30">24 Jul, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Minikube is a kubernetes(k8s) project to enable running single node k8s cluster locally inside a VM, which can be used by developers to prepare their apps for k8s in development phase. For more info, refer their github project.
-Minikube starts with some sane default VM configs for any modern machine.
-DefaultMemory = 2048 DefaultCPUS = 2 DefaultDiskSize = &quot;20g&quot; MinimumDiskSizeMB = 2000 DefaultVMDriver = &quot;virtualbox&quot;  Which is fine for most of the time.
-  </div>
-  
-    <p><a itemprop="url" href="/post/minikube-config/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-24T13:48:53&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-24T13:48:53&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/securing-custom-deployments-via-travis-ci/">Securing Custom Deployments via Travis CI</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-05T17:30:54&#43;05:30">5 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
-Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.
-  </div>
-  
-    <p><a itemprop="url" href="/post/securing-custom-deployments-via-travis-ci/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/learning-hugo/">Learning Hugo</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>1 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-06-28T16:53:59&#43;05:30">28 Jun, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This site is just a playground to learn hugo, how it works and the workflow. Also, since the generated site is just a collection of static web pages, this site is hosted on github as github pages and gets automatically deployed at every commit to the master branch.
-The hugo project for this site is at the source branch. Every commit to this branch triggers a travis build, where the new pages are generated and with some custom deployment shell commands, the generated pages are committed to master branch.
-  </div>
-  
-    <p><a itemprop="url" href="/post/learning-hugo/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-06-28T16:53:59&#43;05:30">
-  <meta itemprop="dateModified" content="2017-06-28T16:53:59&#43;05:30">
-  
-</article>
-
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
   
   <p class="muted">
     This page was generated using
