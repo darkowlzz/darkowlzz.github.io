@@ -8,19 +8,19 @@ disqusShortname = "darkowlzz-space"
     site_title = "darkowlzz"
 
 [[menu.main]]
-    name = "github"
+    name = "Github"
     identifier = "github"
     weight = -110
     url = "https://github.com/darkowlzz"
 
 [[menu.main]]
-    name = "twitter"
+    name = "Twitter"
     identifier = "twitter"
     weight = -100
     url = "https://twitter.com/darkowlzz"
 
 [[menu.main]]
-    name = "old logs"
+    name = "Old Logs"
     identifier = "oldlogs"
     weight = -90
     url = "https://codingowl.tumblr.com"
