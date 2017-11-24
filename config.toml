@@ -24,3 +24,8 @@ disqusShortname = "darkowlzz-space"
     identifier = "oldlogs"
     weight = -90
     url = "https://codingowl.tumblr.com"
+
+[[menu.main]]
+    name = "open hub"
+    identifier = "openhub"
+    url = "https://www.openhub.net/accounts/darkowlzz"
