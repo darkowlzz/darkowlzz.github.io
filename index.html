@@ -23,7 +23,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-07-26T22:09:57&#43;05:30"/>
+<meta property="og:updated_time" content="2017-11-24T16:24:40&#43;05:30"/>
 
 
 
@@ -156,11 +156,85 @@ article [itemprop="description"] {
     
       <a itemprop="url" class="" href="https://codingowl.tumblr.com"><span itemprop="name">old logs</span></a>
     
+      <a itemprop="url" class="" href="https://www.openhub.net/accounts/darkowlzz"><span itemprop="name">open hub</span></a>
+    
   </nav>
 
 
   </center>
   <br>
+
+  
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="/post/git-commit-timestamp/">Git Commit Timestamp</a>
+    </h2>
+    
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>2 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2017-11-24T16:24:40&#43;05:30">24 Nov, 2017</time>
+
+</p>
+    
+  </header>
+  
+  <div itemprop="description">
+    This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
+The previous post ended with an example of how to create a custom commit and run verification on it.
+ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;), Author: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts}, Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.
+  </div>
+  
+    <p><a itemprop="url" href="/post/git-commit-timestamp/">Read More&nbsp;&raquo;</a></p>
+  
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2017-11-24T16:24:40&#43;05:30">
+  <meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30">
+  
+</article>
+
+  
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a>
+    </h2>
+    
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>6 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2017-11-23T23:42:00&#43;05:30">23 Nov, 2017</time>
+
+</p>
+    
+  </header>
+  
+  <div itemprop="description">
+    This post is about PGP signature verification of git commits.
+ Verify by taking everything apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.
+  </div>
+  
+    <p><a itemprop="url" href="/post/git-commit-signature-verification/">Read More&nbsp;&raquo;</a></p>
+  
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2017-11-23T23:42:00&#43;05:30">
+  <meta itemprop="dateModified" content="2017-11-23T23:42:00&#43;05:30">
+  
+</article>
 
   
     <article itemscope itemtype="http://schema.org/CreativeWork">

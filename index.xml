@@ -6,10 +6,32 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Jul 2017 22:09:57 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 24 Nov 2017 16:24:40 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Commit Timestamp</title>
+      <link>https://darkowlzz.github.io/post/git-commit-timestamp/</link>
+      <pubDate>Fri, 24 Nov 2017 16:24:40 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-commit-timestamp/</guid>
+      <description>This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
+The previous post ended with an example of how to create a custom commit and run verification on it.
+ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash(&amp;quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&amp;quot;), Author: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.space&amp;quot;, When: ts}, Committer: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.</description>
+    </item>
+    
+    <item>
+      <title>Git Commit Signature Verification</title>
+      <link>https://darkowlzz.github.io/post/git-commit-signature-verification/</link>
+      <pubDate>Thu, 23 Nov 2017 23:42:00 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-commit-signature-verification/</guid>
+      <description>This post is about PGP signature verification of git commits.
+ Verify by taking everything apart Verify using git cli Verify using golang&amp;rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.</description>
+    </item>
     
     <item>
       <title>Helm Chart Config Preview</title>
