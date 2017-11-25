@@ -6,10 +6,20 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Nov 2017 16:24:40 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 25 Nov 2017 18:51:26 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Tag Signature Verification</title>
+      <link>https://darkowlzz.github.io/post/git-tag-signature-verification/</link>
+      <pubDate>Sat, 25 Nov 2017 18:51:26 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-tag-signature-verification/</guid>
+      <description>This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
+ Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .</description>
+    </item>
     
     <item>
       <title>Git Commit Timestamp</title>
@@ -29,7 +39,7 @@ ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash
       
       <guid>https://darkowlzz.github.io/post/git-commit-signature-verification/</guid>
       <description>This post is about PGP signature verification of git commits.
- Verify by taking everything apart Verify using git cli Verify using golang&amp;rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+ Verify by taking things apart Verify using git cli Verify using golang&amp;rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
 4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.</description>
     </item>
     

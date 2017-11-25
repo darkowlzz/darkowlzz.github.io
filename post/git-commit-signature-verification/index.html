@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commit Signature Verification | darkowlzz</title>
     <meta name="description" content="This post is about PGP signature verification of git commits.
- Verify by taking everything apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+ Verify by taking things apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
 4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.">
     <meta name="keywords" content="">
     
@@ -20,7 +20,7 @@
 
     <meta property="og:title" content="Git Commit Signature Verification" />
 <meta property="og:description" content="This post is about PGP signature verification of git commits.
- Verify by taking everything apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+ Verify by taking things apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
 4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darkowlzz.github.io/post/git-commit-signature-verification/" />
@@ -144,7 +144,7 @@ article [itemprop="description"] {
     
 <meta itemprop="name" content="Git Commit Signature Verification">
 <meta itemprop="description" content="This post is about PGP signature verification of git commits.
- Verify by taking everything apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+ Verify by taking things apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
 4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.">
 
 
@@ -181,7 +181,7 @@ article [itemprop="description"] {
 <p>This post is about PGP signature verification of git commits.</p>
 
 <ul>
-<li>Verify by taking everything apart</li>
+<li>Verify by taking things apart</li>
 <li>Verify using git cli</li>
 <li>Verify using golang&rsquo;s crypto/openpgp package</li>
 <li>Verify using src-d/go-git</li>
@@ -234,7 +234,7 @@ by the person who says it&rsquo;s from.</p>
 <p>In case of git commits, the commit objects are stored in the filesystem under
 <code>.git/objects/</code>, which would have subdirectories with commit hash prefix.</p>
 
-<pre><code>$ ls ./git/objects/
+<pre><code>$ ls .git/objects/
 00/   09/   16/   1d/   27/   32/   3c/   46/   53/   5c/   69/   77/
 91/   9b/   a1/   ac/   b6/   bd/   c6/   d0/   dc/   e6/   f2/   f9/
 01/   0b/   17/   1e/   29/   34/   3e/   47/   54/   5d/   6a/   79/

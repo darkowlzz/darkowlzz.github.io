@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://darkowlzz.github.io/post/git-tag-signature-verification/</loc>
+    <lastmod>2017-11-25T18:51:26+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://darkowlzz.github.io/post/git-commit-timestamp/</loc>
     <lastmod>2017-11-24T16:24:40+05:30</lastmod>
   </url>
@@ -39,7 +44,7 @@
   
   <url>
     <loc>https://darkowlzz.github.io/post/</loc>
-    <lastmod>2017-11-24T16:24:40+05:30</lastmod>
+    <lastmod>2017-11-25T18:51:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,7 +55,7 @@
   
   <url>
     <loc>https://darkowlzz.github.io/</loc>
-    <lastmod>2017-11-24T16:24:40+05:30</lastmod>
+    <lastmod>2017-11-25T18:51:26+05:30</lastmod>
     <priority>0</priority>
   </url>
   

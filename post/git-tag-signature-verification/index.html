@@ -4,28 +4,30 @@
     <meta name="generator" content="Hugo 0.24.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | darkowlzz</title>
-    <meta name="description" content="">
+    <title>Git Tag Signature Verification | darkowlzz</title>
+    <meta name="description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
+ Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .">
     <meta name="keywords" content="">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/" />
+    <meta property="og:title" content="Git Tag Signature Verification" />
+<meta property="og:description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
+ Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/git-tag-signature-verification/" />
 
 
 
-<meta property="og:updated_time" content="2017-11-25T18:51:26&#43;05:30"/>
+<meta property="article:published_time" content="2017-11-25T18:51:26&#43;05:30"/>
+<meta property="article:modified_time" content="2017-11-25T18:51:26&#43;05:30"/>
+
 
 
 
@@ -53,9 +55,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/post/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/git-tag-signature-verification/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -134,34 +134,28 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="" href="https://github.com/darkowlzz"><span itemprop="name">github</span></a>
-    
-      <a itemprop="url" class="" href="https://twitter.com/darkowlzz"><span itemprop="name">twitter</span></a>
-    
-      <a itemprop="url" class="" href="https://codingowl.tumblr.com"><span itemprop="name">old logs</span></a>
-    
-      <a itemprop="url" class="" href="https://www.openhub.net/accounts/darkowlzz"><span itemprop="name">open hub</span></a>
-    
-  </nav>
-
-
 </header>
     <main>
-  <header>
-    <h1>Posts</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="Git Tag Signature Verification">
+<meta itemprop="description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
+ Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .">
+
+
+<meta itemprop="dateModified" content="2017-11-25T18:51:26&#43;05:30" />
+<meta itemprop="wordCount" content="545">
+
+
+
+<meta itemprop="keywords" content="" />
+
+    <header>
+      <h1 itemprop="headline">Git Tag Signature Verification</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
@@ -172,249 +166,233 @@ article [itemprop="description"] {
 
   Published: <time datetime="2017-11-25T18:51:26&#43;05:30">25 Nov, 2017</time>
 
+
+      </p>
+    </header>
+    
+    
+
+    <div itemprop="articleBody">
+      
+
+<p>This post is also a sequel of other posts related to git and signature
+verification
+(<a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>
+and <a href="/post/git-commit-timestamp">Git Commit Timestamp</a>). This one is based on
+adding tag signature verification in
+<a href="http://github.com/src-d/go-git">src-d/go-git</a>.</p>
+
+<ul>
+<li>Verify by taking everything apart</li>
+<li>Verify using src-d/go-git</li>
+</ul>
+
+<p>Git tags are signed similar to commits with small differences in their storage
+format. Like commit, which are stored in <code>.git/objects/</code>, tag are stored in
+<code>.git/refs/tags/</code>.</p>
+
+<pre><code>$ ls .git/refs/tags/
+v0.1  v0.2  v0.3
+</code></pre>
+
+<p>Since tags are fixed reference to git commits, these file contain hash of the
+commit they refer to.</p>
+
+<pre><code>$ cat .git/refs/tags/v0.1
+064f92fe00e70e6b64cb358a65039daa4b6ae8d2
+</code></pre>
+
+<p>In this case, <code>064f92fe00e70e6b64cb358a65039daa4b6ae8d2</code> is the commit hash of
+the commit tag <code>v0.1</code> refers to.</p>
+
+<p>Also, in this case, <code>v0.1</code>, <code>v0.2</code> and <code>v0.3</code> point to the same commit but only
+tag <code>v0.2</code> is signed. <code>v0.1</code> and <code>v0.3</code>, not being signed have the same content.
+But <code>v0.2</code> contains a different hash. It contains hash of an actual tag object.</p>
+
+<pre><code>$ cat .git/refs/tags/v0.2
+5ec495852a6ca4f4082cc86b11d56c732b5ece4b
+
+$ cat .git/refs/tags/v0.3
+064f92fe00e70e6b64cb358a65039daa4b6ae8d2
+</code></pre>
+
+<p>Reading the commit hash of unsigned tag with <code>cat-file</code> shows the commit object
+content.</p>
+
+<pre><code>$ git cat-file -p 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
+tree 2ff896e009f8b165bb36583653e2868c30eb4127
+parent d2ae550ad09a39d67ca18afbd300ce83d90f30a1
+author Sunny &lt;example@darkowlzz.space&gt; 1511523499 +0000
+committer Sunny &lt;example@darkowlzz.space&gt; 1511523499 +0000
+gpgsig -----BEGIN PGP SIGNATURE-----
+
+ iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYBLcTHG1lQGRhcmtv
+ d2x6ei5zcGFjZQAKCRBDIt4ypybJTlD6CACEaXd+yoFGMJdtan475CfkgiEc90/3
+ W2iIKRvU8sBogfDtfZxYb02RKiemxbaBgTKJDoW7Nzn+XitSNtwHwcUZpNv3dm0g
+ Dx46KV090Hv8lJbKFwaORJ8FrGhtOpSluN7l/zY9cmVU6ltInWwnj3l/7Pp89hnA
+ 9ir/nrtwliJEyRG8D1nbs8cg7F2Gg5BJwSAfM5F0pCj2ka99vIyHHMSRl7zrln0n
+ eGObrsjN+EG784uvpOSyquejC02tRrcauLkbz5HmcXkzq8F4QFpcOWVwEbbR1dqB
+ lLFrbzXa4h5kvexMofJoCFT8zTLpRQXO6lD4OoCkFn+IqPMRLaJ1GFr8
+ =LU+k
+ -----END PGP SIGNATURE-----
+
+Some commit message
+</code></pre>
+
+<p>And reading the hash of signed tag shows the content of a tag object.</p>
+
+<pre><code>$ git cat-file -p 5ec495852a6ca4f4082cc86b11d56c732b5ece4b
+object 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
+type commit
+tag v0.2
+tagger Sunny &lt;example@darkowlzz.space&gt; 1511524851 +0000
+
+Some tag message
+-----BEGIN PGP SIGNATURE-----
+
+iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
+d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
+sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
+GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
+OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
+nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
+CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
+=l75D
+-----END PGP SIGNATURE-----
+</code></pre>
+
+<p>A signed tag object contains <code>object</code>, <code>type</code>, <code>tagger</code>, tag message/comment
+and signature. Value of <code>object</code> is the same as the commit hash the tag
+refers to.</p>
+
+<p>Apart from the attributes of tag object and commit object, signature is at the
+bottom in a tag object but in a commit object, signature is above message.</p>
+
+<h1 id="verify-by-taking-things-apart">Verify by taking things apart</h1>
+
+<p>Similar to <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>,
+to perform a manual signature verification by taking things apart, create a
+file, say <code>tag.txt</code> and copy the tag content except the signature.</p>
+
+<pre><code>$ git cat-file -p 5ec495852a6ca4f4082cc86b11d56c732b5ece4b
+object 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
+type commit
+tag v0.2
+tagger Sunny &lt;example@darkowlzz.space&gt; 1511524851 +0000
+
+Some tag message
+</code></pre>
+
+<p>Create another file <code>doc.sig</code> and copy the signature only.</p>
+
+<pre><code>-----BEGIN PGP SIGNATURE-----
+
+iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
+d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
+sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
+GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
+OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
+nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
+CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
+=l75D
+-----END PGP SIGNATURE-----
+</code></pre>
+
+<p>To verify that the tag has not been tampered and it&rsquo;s signed by the person who
+says to have, run:</p>
+
+<pre><code>$ gpg --verify doc.sig tag.txt
+</code></pre>
+
+<p>Ensure that the public key of the signer is in gpg keyring before verifying.</p>
+
+<h1 id="verify-using-src-d-go-git">Verify using src-d/go-git</h1>
+
+<p><code>gopkg.in/src-d/go-git.v4/plumbing/object</code>&rsquo;s Tag type has <code>Verify</code> method now,
+to perform signature verification of a tag, given an armored keyring.</p>
+
+<pre><code>func (c *Tag) Verify(armoredKeyRing string) (*openpgp.Entity, error)
+</code></pre>
+
+<p>An example tag object can be created and verified as:</p>
+
+<pre><code class="language-golang">ts := time.Unix(1511524851, 0)
+loc, _ := time.LoadLocation(&quot;Asia/Tokyo&quot;)
+tag := &amp;Tag{
+    Name:   &quot;v0.2&quot;,
+    Tagger: Signature{Name: &quot;Sunny&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts.In(loc)},
+    Message: `This is a signed tag
+`,
+    TargetType: plumbing.CommitObject,
+    Target:     plumbing.NewHash(&quot;064f92fe00e70e6b64cb358a65039daa4b6ae8d2&quot;),
+    PGPSignature: `
+-----BEGIN PGP SIGNATURE-----
+
+iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
+d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
+sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
+GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
+OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
+nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
+CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
+=l75D
+-----END PGP SIGNATURE-----
+`,
+}
+
+entity, err := tag.Verify(armoredKeyRing)
+...
+</code></pre>
+
+<p>For details about creating <code>armoredKeyRing</code>, check the <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a> post.</p>
+
+<p>Also, like commit message, a tag message too ends with a newline.</p>
+
+    </div>
+    
+      <article>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'darkowlzz-space';
+    var disqus_identifier = 'https:\/\/darkowlzz.github.io\/post\/git-tag-signature-verification\/';
+    var disqus_title = 'Git Tag Signature Verification';
+    var disqus_url = 'https:\/\/darkowlzz.github.io\/post\/git-tag-signature-verification\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author"></span>
+    
+  
+  <time datetime="2017-11-25T18:51:26&#43;05:30">
+    25 Nov, 2017
+  </time>
+  
+  
+  using <span itemprop="wordCount">545</span> words.
 </p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
- Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-tag-signature-verification/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-25T18:51:26&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-25T18:51:26&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-commit-timestamp/">Git Commit Timestamp</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+      
 
-  Published: <time datetime="2017-11-24T16:24:40&#43;05:30">24 Nov, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;), Author: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts}, Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-commit-timestamp/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-24T16:24:40&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>6 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-11-23T23:42:00&#43;05:30">23 Nov, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This post is about PGP signature verification of git commits.
- Verify by taking things apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
-4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-commit-signature-verification/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-23T23:42:00&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-23T23:42:00&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/helm-chart-config-preview/">Helm Chart Config Preview</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-26T22:09:57&#43;05:30">26 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
-helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
-  </div>
-  
-    <p><a itemprop="url" href="/post/helm-chart-config-preview/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-26T22:09:57&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/minikube-config/">Minikube Config</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-24T13:48:53&#43;05:30">24 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Minikube is a kubernetes(k8s) project to enable running single node k8s cluster locally inside a VM, which can be used by developers to prepare their apps for k8s in development phase. For more info, refer their github project.
-Minikube starts with some sane default VM configs for any modern machine.
-DefaultMemory = 2048 DefaultCPUS = 2 DefaultDiskSize = &quot;20g&quot; MinimumDiskSizeMB = 2000 DefaultVMDriver = &quot;virtualbox&quot;  Which is fine for most of the time.
-  </div>
-  
-    <p><a itemprop="url" href="/post/minikube-config/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-24T13:48:53&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-24T13:48:53&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/securing-custom-deployments-via-travis-ci/">Securing Custom Deployments via Travis CI</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-05T17:30:54&#43;05:30">5 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
-Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.
-  </div>
-  
-    <p><a itemprop="url" href="/post/securing-custom-deployments-via-travis-ci/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/learning-hugo/">Learning Hugo</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>1 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-06-28T16:53:59&#43;05:30">28 Jun, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This site is just a playground to learn hugo, how it works and the workflow. Also, since the generated site is just a collection of static web pages, this site is hosted on github as github pages and gets automatically deployed at every commit to the master branch.
-The hugo project for this site is at the source branch. Every commit to this branch triggers a travis build, where the new pages are generated and with some custom deployment shell commands, the generated pages are committed to master branch.
-  </div>
-  
-    <p><a itemprop="url" href="/post/learning-hugo/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-06-28T16:53:59&#43;05:30">
-  <meta itemprop="dateModified" content="2017-06-28T16:53:59&#43;05:30">
-  
-</article>
-
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
   
   <p class="muted">
     This page was generated using
