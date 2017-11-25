@@ -6,7 +6,7 @@ draft: false
 
 This post is about PGP signature verification of git commits.
 
-* Verify by taking everything apart
+* Verify by taking things apart
 * Verify using git cli
 * Verify using golang's crypto/openpgp package
 * Verify using src-d/go-git
@@ -57,7 +57,7 @@ In case of git commits, the commit objects are stored in the filesystem under
 `.git/objects/`, which would have subdirectories with commit hash prefix.
 
 ```
-$ ls ./git/objects/
+$ ls .git/objects/
 00/   09/   16/   1d/   27/   32/   3c/   46/   53/   5c/   69/   77/
 91/   9b/   a1/   ac/   b6/   bd/   c6/   d0/   dc/   e6/   f2/   f9/
 01/   0b/   17/   1e/   29/   34/   3e/   47/   54/   5d/   6a/   79/
