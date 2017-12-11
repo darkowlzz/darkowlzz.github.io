@@ -1,6 +1,7 @@
 baseURL = "https://darkowlzz.github.io/"
 languageCode = "en-us"
 title = "darkowlzz"
+theme = "after-dark"
 googleAnalytics = "UA-63771901-5"
 disqusShortname = "darkowlzz-space"
 
@@ -8,24 +9,13 @@ disqusShortname = "darkowlzz-space"
     site_title = "darkowlzz"
 
 [[menu.main]]
-    name = "github"
-    identifier = "github"
+    name = "Home"
+    identifier = "home"
     weight = -110
-    url = "https://github.com/darkowlzz"
+    url = "/"
 
 [[menu.main]]
-    name = "twitter"
-    identifier = "twitter"
+    name = "About"
+    identifier = "about"
     weight = -100
-    url = "https://twitter.com/darkowlzz"
-
-[[menu.main]]
-    name = "old logs"
-    identifier = "oldlogs"
-    weight = -90
-    url = "https://codingowl.tumblr.com"
-
-[[menu.main]]
-    name = "open hub"
-    identifier = "openhub"
-    url = "https://www.openhub.net/accounts/darkowlzz"
+    url = "/about/me"
