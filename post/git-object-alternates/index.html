@@ -4,9 +4,10 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>darkowlzz</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Git Object Alternates | darkowlzz</title>
+    <meta name="description" content="This is another git related post coming out of more contributions to the src-d/go-git project. Other related post can be found by following the &ldquo;go-git&rdquo; tag at the bottom of this page.
+Git clone offers an option to clone a repo without actually copying the git objects to a new location, but sharing the objects with the new repo. This can be done by using the --shared or -s option. It&rsquo;s for local repos only.">
+    <meta name="keywords" content="git, go-git, go">
     
     
     
@@ -16,14 +17,18 @@
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="darkowlzz" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/" />
+    <meta property="og:title" content="Git Object Alternates" />
+<meta property="og:description" content="This is another git related post coming out of more contributions to the src-d/go-git project. Other related post can be found by following the &ldquo;go-git&rdquo; tag at the bottom of this page.
+Git clone offers an option to clone a repo without actually copying the git objects to a new location, but sharing the objects with the new repo. This can be done by using the --shared or -s option. It&rsquo;s for local repos only." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/git-object-alternates/" />
 
 
 
-<meta property="og:updated_time" content="2017-12-11T16:16:02&#43;05:30"/>
+<meta property="article:published_time" content="2017-12-11T16:16:02&#43;05:30"/>
+
+<meta property="article:modified_time" content="2017-12-11T16:16:02&#43;05:30"/>
+
 
 
 
@@ -42,12 +47,6 @@
     <meta name="theme-color" content="#000">
 
     
-      
-
-
-
-
-    
     
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -57,9 +56,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/git-object-alternates/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -138,36 +135,29 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
 </header>
     <main>
-  <header>
-    <center><h1 >darkowlzz</h1></center>
-  </header>
-
-  <center>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="active" href="/"><span itemprop="name">Home</span></a>
-    
-      <a itemprop="url" class="" href="/about/me"><span itemprop="name">About</span></a>
-    
-  </nav>
+<meta itemprop="name" content="Git Object Alternates">
+<meta itemprop="description" content="This is another git related post coming out of more contributions to the src-d/go-git project. Other related post can be found by following the &ldquo;go-git&rdquo; tag at the bottom of this page.
+Git clone offers an option to clone a repo without actually copying the git objects to a new location, but sharing the objects with the new repo. This can be done by using the --shared or -s option. It&rsquo;s for local repos only.">
 
 
-  </center>
-  <br>
+<meta itemprop="datePublished" content="2017-12-11T16:16:02&#43;05:30" />
+<meta itemprop="dateModified" content="2017-12-11T16:16:02&#43;05:30" />
+<meta itemprop="wordCount" content="260">
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-object-alternates/">Git Object Alternates</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+
+
+<meta itemprop="keywords" content="git,go-git,go," />
+
+    <header>
+      <h1 itemprop="headline">Git Object Alternates</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
@@ -178,285 +168,125 @@ article [itemprop="description"] {
 
   Published: <time datetime="2017-12-11T16:16:02&#43;05:30">11 Dec, 2017</time>
 
+
+      </p>
+    </header>
+    
+    
+
+    <div itemprop="articleBody">
+      <p>This is another git related post coming out of more contributions to the
+<a href="https://github.com/src-d/go-git">src-d/go-git</a> project. Other related post can
+be found by following the &ldquo;go-git&rdquo; tag at the bottom of this page.</p>
+
+<p>Git clone offers an option to clone a repo without actually copying the git
+objects to a new location, but sharing the objects with the new repo. This can
+be done by using the <code>--shared</code> or <code>-s</code> option. It&rsquo;s for local repos only.</p>
+
+<pre><code>$ git clone -s &lt;sourcerepo&gt; &lt;newrepo&gt;
+</code></pre>
+
+<p>This would clone the source repo files into a new repo and create an alternates
+files at <code>.git/objects/info/alternates</code>, with content as an absolute path to the
+source repo&rsquo;s object directory.</p>
+
+<p>For example:</p>
+
+<pre><code>/Users/username/rep1//.git/objects
+</code></pre>
+
+<p>Or, in Windows:</p>
+
+<pre><code>C:\\Users\\username\\repo1\\.git\\objects
+</code></pre>
+
+<p>This tells git where to look for the objects in a repo. According to
+<a href="https://www.kernel.org/pub/software/scm/git/docs/gitrepository-layout.html">gitrepository-layout</a>
+documentation, there could be multiple paths in the file (one per line) and git
+would look them up one-by-one. Also, these paths could be relative as well. But
+relative to the source object directory, not repo. And that mostly looks
+something like this (if the source and shared repo are at the same level):</p>
+
+<pre><code>../../../sourcerepo//.git/objects
+</code></pre>
+
+<p>This shared object lookup works in go-git too now for both *nix and Windows.</p>
+
+<p>In go-git, <code>.git/</code> is abstracted as an internal type, <code>DotGit</code>. Since, it&rsquo;s
+part of an internal package, it can&rsquo;t be used by a user of go-git. But is
+available to be used in go-git development. <code>DotGit</code> has a method <code>Alternates()</code>
+which reads the alternates file and returns a list of all the resolved <code>DotGit</code>s
+found in the alternates.</p>
+
+    </div>
+    
+      <article>
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author"></span>
+    
+  
+  <time datetime="2017-12-11T16:16:02&#43;05:30">
+    11 Dec, 2017
+  </time>
+  
+  
+    and tagged <a href="/tags/git/">git</a>, <a href="/tags/go/">go</a> and <a href="/tags/go-git/">go-git</a>
+  
+  using <span itemprop="wordCount">260</span> words.
 </p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This is another git related post coming out of more contributions to the src-d/go-git project. Other related post can be found by following the &ldquo;go-git&rdquo; tag at the bottom of this page.
-Git clone offers an option to clone a repo without actually copying the git objects to a new location, but sharing the objects with the new repo. This can be done by using the --shared or -s option. It&rsquo;s for local repos only.
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-object-alternates/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-12-11T16:16:02&#43;05:30">
-  <meta itemprop="dateModified" content="2017-12-11T16:16:02&#43;05:30">
-  
-</article>
 
+      
   
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
 
-  Published: <time datetime="2017-11-25T18:51:26&#43;05:30">25 Nov, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
- Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-tag-signature-verification/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-25T18:51:26&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-25T18:51:26&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-commit-timestamp/">Git Commit Timestamp</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+  <aside>
+    <header>Related Content</header>
+    <ul>
+      
+      
+        <li><a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a> &ndash; 3 minutes
+      
+        <li><a href="/post/git-commit-timestamp/">Git Commit Timestamp</a> &ndash; 2 minutes
+      
+        <li><a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a> &ndash; 6 minutes
+      
+    </ul>
+  </aside>
 
-  Published: <time datetime="2017-11-24T16:24:40&#43;05:30">24 Nov, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-commit-timestamp/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-24T16:24:40&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>6 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-11-23T23:42:00&#43;05:30">23 Nov, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This post is about PGP signature verification of git commits.
- Verify by taking things apart Verify using git cli Verify using golang&rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
-4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.
-  </div>
-  
-    <p><a itemprop="url" href="/post/git-commit-signature-verification/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-11-23T23:42:00&#43;05:30">
-  <meta itemprop="dateModified" content="2017-11-23T23:42:00&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/helm-chart-config-preview/">Helm Chart Config Preview</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-26T22:09:57&#43;05:30">26 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
-helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
-  </div>
-  
-    <p><a itemprop="url" href="/post/helm-chart-config-preview/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-26T22:09:57&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/minikube-config/">Minikube Config</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-24T13:48:53&#43;05:30">24 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Minikube is a kubernetes(k8s) project to enable running single node k8s cluster locally inside a VM, which can be used by developers to prepare their apps for k8s in development phase. For more info, refer their github project.
-Minikube starts with some sane default VM configs for any modern machine.
-DefaultMemory = 2048 DefaultCPUS = 2 DefaultDiskSize = &quot;20g&quot; MinimumDiskSizeMB = 2000 DefaultVMDriver = &quot;virtualbox&quot;  Which is fine for most of the time.
-  </div>
-  
-    <p><a itemprop="url" href="/post/minikube-config/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-24T13:48:53&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-24T13:48:53&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/securing-custom-deployments-via-travis-ci/">Securing Custom Deployments via Travis CI</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-07-05T17:30:54&#43;05:30">5 Jul, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
-Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.
-  </div>
-  
-    <p><a itemprop="url" href="/post/securing-custom-deployments-via-travis-ci/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/learning-hugo/">Learning Hugo</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>1 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-06-28T16:53:59&#43;05:30">28 Jun, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This site is just a playground to learn hugo, how it works and the workflow. Also, since the generated site is just a collection of static web pages, this site is hosted on github as github pages and gets automatically deployed at every commit to the master branch.
-The hugo project for this site is at the source branch. Every commit to this branch triggers a travis build, where the new pages are generated and with some custom deployment shell commands, the generated pages are committed to master branch.
-  </div>
-  
-    <p><a itemprop="url" href="/post/learning-hugo/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-06-28T16:53:59&#43;05:30">
-  <meta itemprop="dateModified" content="2017-06-28T16:53:59&#43;05:30">
-  
-</article>
-
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <center>
-    <nav>
-  <p>
-    
-    <span>Page 1 of 1</span>
-    
-  </p>
-</nav>
-
-    
+  
   <p class="muted">
     This page was generated using
     <a target="_blank" rel="noopener" href="https://comfusion.github.io/after-dark/">After Dark</a>
@@ -465,7 +295,6 @@ The hugo project for this site is at the source branch. Every commit to this bra
   </p>
 
 
-  </center>
 </footer>
   </body>
 </html>

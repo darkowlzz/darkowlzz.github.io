@@ -6,10 +6,20 @@
     <description>Recent content in Posts on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Nov 2017 18:51:26 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 11 Dec 2017 16:16:02 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Object Alternates</title>
+      <link>https://darkowlzz.github.io/post/git-object-alternates/</link>
+      <pubDate>Mon, 11 Dec 2017 16:16:02 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-object-alternates/</guid>
+      <description>This is another git related post coming out of more contributions to the src-d/go-git project. Other related post can be found by following the &amp;ldquo;go-git&amp;rdquo; tag at the bottom of this page.
+Git clone offers an option to clone a repo without actually copying the git objects to a new location, but sharing the objects with the new repo. This can be done by using the --shared or -s option. It&amp;rsquo;s for local repos only.</description>
+    </item>
     
     <item>
       <title>Git Tag Signature Verification</title>
