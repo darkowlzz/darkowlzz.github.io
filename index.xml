@@ -43,7 +43,7 @@ email</description>
       <guid>https://darkowlzz.github.io/post/git-commit-timestamp/</guid>
       <description>This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
 The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash(&amp;quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&amp;quot;), Author: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.space&amp;quot;, When: ts}, Committer: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.</description>
+ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;</description>
     </item>
     
     <item>
@@ -65,8 +65,7 @@ ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash
       <guid>https://darkowlzz.github.io/post/helm-chart-config-preview/</guid>
       <description>Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
 helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .</description>
+values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .</description>
     </item>
     
     <item>

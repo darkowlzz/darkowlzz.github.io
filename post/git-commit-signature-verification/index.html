@@ -362,7 +362,8 @@ default keyring. Now, this can be read and an <code>io.Reader</code> can be crea
 passed to <code>CheckArmoredDetachedSignature()</code> as the keyring. Or even the public
 key string can be used directly to create a reader as:</p>
 
-<pre><code class="language-go">armoredKeyRingReader := strings.NewReader(`
+
+armoredKeyRingReader := strings.NewReader(`
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQENBFmtHgABCADnfThM7q8D4pgUub9jMppSpgFh3ev84g3Csc3yQUlszEOVgXmu
@@ -385,11 +386,11 @@ signature := strings.NewReader(`
  -----END PGP SIGNATURE-----
 `)
 
-commitData, err := os.Open(&quot;commit.txt&quot;)
+commitData, err := os.Open("commit.txt")
 ...
 
 entity, err := openpgp.CheckArmoredDetachedSignature(armoredKeyRingReader, commitData, signature)
-</code></pre>
+
 
 <p>In the above code, readers are created using <code>strings.NewReader</code> and <code>os.Open</code>.
 All the inline keys can be read from file using <code>os.Open</code> and their readers
@@ -408,15 +409,16 @@ implicit. Only an armored keyring is passed.</p>
 
 <p>An example commit object can be created and verified as:</p>
 
-<pre><code class="language-golang">ts := time.Unix(0000000000, 0)
-commit := &amp;Commit{
-    Hash:      plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;),
-    Author:    Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts},
-    Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts},
+
+ts := time.Unix(0000000000, 0)
+commit := &Commit{
+    Hash:      plumbing.NewHash("8a9cea36fe052711fbc42b86e1f99a4fa0065deb"),
+    Author:    Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts},
+    Committer: Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts},
     Message: `status: simplify template command selection
 `,
-    TreeHash:     plumbing.NewHash(&quot;6572ba6df4f1fb323c8aaa24ce07bca0648b161e&quot;),
-    ParentHashes: []plumbing.Hash{plumbing.NewHash(&quot;ede5f57ea1280a0065beec96d3e1a3453d010dbd&quot;)},
+    TreeHash:     plumbing.NewHash("6572ba6df4f1fb323c8aaa24ce07bca0648b161e"),
+    ParentHashes: []plumbing.Hash{plumbing.NewHash("ede5f57ea1280a0065beec96d3e1a3453d010dbd")},
     PGPSignature: `
 -----BEGIN PGP SIGNATURE-----
 
@@ -434,7 +436,7 @@ vLzAWdidLH2P+EUOqlNMuVScHYWD1FZB0/L5LJ8no5pTowQd2Z+Nggxl
     
 entity, err := commit.Verify(armoredKeyRing)
 ...
-</code></pre>
+
 
 <p><strong>NOTE</strong>: The commit message contains a newline. While implementing this
 verification feature in go-git, I spent a long time debugging what was causing

@@ -7,8 +7,7 @@
     <title>Helm Chart Config Preview | darkowlzz</title>
     <meta name="description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
 helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
+values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
     <meta name="keywords" content="k8s, helm">
     
     
@@ -22,8 +21,7 @@ values.yaml of mariadb chart:
     <meta property="og:title" content="Helm Chart Config Preview" />
 <meta property="og:description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
 helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: ." />
+values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darkowlzz.github.io/post/helm-chart-config-preview/" />
 
@@ -147,8 +145,7 @@ article [itemprop="description"] {
 <meta itemprop="name" content="Helm Chart Config Preview">
 <meta itemprop="description" content="Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
 helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
+values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
 
 
 <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30" />
@@ -189,9 +186,9 @@ before installation.</p>
 given chart. The configurations are stored in <code>values.yaml</code> and
 <code>heml inspect values [chart]</code> shows only the content of <code>values.yaml</code>.</p>
 
-<p><code>values.yaml</code> of mariadb chart:</p>
+<p><code>values.yaml</code> of mariadb chart:
 
-<pre><code>---
+---
 image: bitnami/mariadb:10.1.23-r2
 
 ## Specify an imagePullPolicy (Required)
@@ -207,7 +204,7 @@ imagePullPolicy: IfNotPresent
 ## Create a database
 # mariadbDatabase:
 ...
-</code></pre>
+</p>
 
 <p><a href="https://docs.helm.sh/using_helm/#customizing-the-chart-before-installing">Customizing the Chart Before Installing</a>
 describes how these configurations can be customized by passing a file name or

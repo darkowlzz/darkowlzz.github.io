@@ -7,7 +7,7 @@
     <title>Git Commit Timestamp | darkowlzz</title>
     <meta name="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
 The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;), Author: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts}, Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.">
+ts := time.Unix(0000000000, 0) commit := &Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;">
     <meta name="keywords" content="git, go-git, go">
     
     
@@ -21,7 +21,7 @@ ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&qu
     <meta property="og:title" content="Git Commit Timestamp" />
 <meta property="og:description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
 The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;), Author: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts}, Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz." />
+ts := time.Unix(0000000000, 0) commit := &Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://darkowlzz.github.io/post/git-commit-timestamp/" />
 
@@ -145,7 +145,7 @@ article [itemprop="description"] {
 <meta itemprop="name" content="Git Commit Timestamp">
 <meta itemprop="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
 The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;), Author: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts}, Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.">
+ts := time.Unix(0000000000, 0) commit := &Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;">
 
 
 <meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30" />
@@ -184,16 +184,17 @@ sequel to that in a way.</p>
 <p>The previous post ended with an example of how to create a custom commit and
 run verification on it.</p>
 
-<pre><code class="language-golang">ts := time.Unix(0000000000, 0)
-commit := &amp;Commit{
-    Hash:      plumbing.NewHash(&quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&quot;),
-    Author:    Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts},
-    Committer: Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts},
+
+ts := time.Unix(0000000000, 0)
+commit := &Commit{
+    Hash:      plumbing.NewHash("8a9cea36fe052711fbc42b86e1f99a4fa0065deb"),
+    Author:    Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts},
+    Committer: Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts},
     Message: `status: simplify template command selection
 `,
     ...
 }
-</code></pre>
+
 
 <p>The problem here is that the timestamp being added to the commit has no location
 attached to it. Hence, it uses the local timezone of the machine where it runs.
@@ -216,11 +217,12 @@ Date:   Mon Nov 20 13:28:18 2017 -0500
 <p>A fix for the above issue would be to add a fixed location to the created
 timestamp.</p>
 
-<pre><code class="language-golang">loc, _ := time.LoadLocation(&quot;Asia/Tokyo&quot;)
+
+loc, _ := time.LoadLocation("Asia/Tokyo")
 ...
-    Author:    Signature{Name: &quot;darkowlzz&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts.In(loc)},
+    Author:    Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts.In(loc)},
     ...
-</code></pre>
+
 
 <p>That would ensure that the timestamp is always the same in that commit.</p>
 

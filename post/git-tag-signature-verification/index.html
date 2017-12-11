@@ -316,15 +316,16 @@ to perform signature verification of a tag, given an armored keyring.</p>
 
 <p>An example tag object can be created and verified as:</p>
 
-<pre><code class="language-golang">ts := time.Unix(1511524851, 0)
-loc, _ := time.LoadLocation(&quot;Asia/Tokyo&quot;)
-tag := &amp;Tag{
-    Name:   &quot;v0.2&quot;,
-    Tagger: Signature{Name: &quot;Sunny&quot;, Email: &quot;example@darkowlzz.space&quot;, When: ts.In(loc)},
+
+ts := time.Unix(1511524851, 0)
+loc, _ := time.LoadLocation("Asia/Tokyo")
+tag := &Tag{
+    Name:   "v0.2",
+    Tagger: Signature{Name: "Sunny", Email: "example@darkowlzz.space", When: ts.In(loc)},
     Message: `This is a signed tag
 `,
     TargetType: plumbing.CommitObject,
-    Target:     plumbing.NewHash(&quot;064f92fe00e70e6b64cb358a65039daa4b6ae8d2&quot;),
+    Target:     plumbing.NewHash("064f92fe00e70e6b64cb358a65039daa4b6ae8d2"),
     PGPSignature: `
 -----BEGIN PGP SIGNATURE-----
 
@@ -342,7 +343,7 @@ CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
 
 entity, err := tag.Verify(armoredKeyRing)
 ...
-</code></pre>
+
 
 <p>For details about creating <code>armoredKeyRing</code>, check the <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a> post.</p>
 
