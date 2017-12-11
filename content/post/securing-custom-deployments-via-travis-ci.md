@@ -27,13 +27,13 @@ as deployment scripts. Script execution commands can be added to any of the
 depending on the requirements. For a deployment script, `after_success` is a
 good place to run them.
 
-```yml
+{{< highlight yaml >}}
 # .travis.yml
 ...
 after_success:
     - ./scripts/deploy.sh
 ...
-```
+{{< /highlight >}}
 
 > **The exit code of `after_success`, `after_failure`, `after_script` and 
 subsequent stages do not affect the build result. However, if one of these
@@ -46,14 +46,14 @@ When doing custom deployments, the secrets must be stored in environment
 variables in encrypted form. Encrypted env vars look like this in .travis.yml
 file:
 
-```yml
+{{< highlight yaml >}}
 # .travis.yml
 env:
   global:
     - APP_NAME="foo"
     - secure: "N79ZQG6jUTP5o0YSc1dTtb02PV+1j6sjM/DlvtCEcdaiPiEH"
     - secure: "L08rVW1wuAz5P4j3yiAJkxG0Dog5cr8YSPzCCnguDrBy7Ok5"
-```
+{{< /highlight >}}
 
 Even the variable names are not shown. To create encrypted variables, use `travis`
 cli. Refer their [Encryption Key Guide](https://docs.travis-ci.com/user/encryption-keys).
@@ -83,7 +83,7 @@ Deployment is generally not intended when:
 
 For such scenarios, some conditions in the deployment script could be used.
 
-```
+{{< highlight sh >}}
 if [ "$TRAVIS_BRANCH" != "$DEPLOY_BRANCH" ]; then
     echo "Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch"
     exit 0
@@ -97,7 +97,7 @@ else
         .....
     fi
 fi
-```
+{{< /highlight >}}
 
 This would ensure that deployments are not triggered when a new branch is built
 and when a PR is sent. Preventing accidental deployments from branches by the

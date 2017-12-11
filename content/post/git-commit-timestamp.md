@@ -12,7 +12,8 @@ sequel to that in a way.
 
 The previous post ended with an example of how to create a custom commit and
 run verification on it.
-```golang
+
+{{< highlight go>}}
 ts := time.Unix(0000000000, 0)
 commit := &Commit{
     Hash:      plumbing.NewHash("8a9cea36fe052711fbc42b86e1f99a4fa0065deb"),
@@ -22,7 +23,8 @@ commit := &Commit{
 `,
     ...
 }
-```
+{{< /highlight >}}
+
 The problem here is that the timestamp being added to the commit has no location
 attached to it. Hence, it uses the local timezone of the machine where it runs.
 Due to this, the test started failing when run on machines in different
@@ -44,12 +46,14 @@ Date:   Mon Nov 20 13:28:18 2017 -0500
 
 A fix for the above issue would be to add a fixed location to the created
 timestamp.
-```golang
+
+{{< highlight go>}}
 loc, _ := time.LoadLocation("Asia/Tokyo")
 ...
     Author:    Signature{Name: "darkowlzz", Email: "example@darkowlzz.space", When: ts.In(loc)},
     ...
-```
+{{< /highlight >}}
+
 
 That would ensure that the timestamp is always the same in that commit.
 

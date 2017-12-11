@@ -16,7 +16,7 @@ given chart. The configurations are stored in `values.yaml` and
 `heml inspect values [chart]` shows only the content of `values.yaml`.
 
 `values.yaml` of mariadb chart:
-```
+{{< highlight yaml >}}
 ---
 image: bitnami/mariadb:10.1.23-r2
 
@@ -33,7 +33,7 @@ imagePullPolicy: IfNotPresent
 ## Create a database
 # mariadbDatabase:
 ...
-```
+{{< /highlight >}}
 
 [Customizing the Chart Before Installing](https://docs.helm.sh/using_helm/#customizing-the-chart-before-installing)
 describes how these configurations can be customized by passing a file name or

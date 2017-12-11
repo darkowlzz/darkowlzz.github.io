@@ -189,7 +189,8 @@ This file would contain public key of you@example.com user only, from the
 default keyring. Now, this can be read and an `io.Reader` can be created and
 passed to `CheckArmoredDetachedSignature()` as the keyring. Or even the public
 key string can be used directly to create a reader as:
-```go
+
+{{< highlight go>}}
 armoredKeyRingReader := strings.NewReader(`
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -217,7 +218,7 @@ commitData, err := os.Open("commit.txt")
 ...
 
 entity, err := openpgp.CheckArmoredDetachedSignature(armoredKeyRingReader, commitData, signature)
-```
+{{< /highlight >}}
 
 In the above code, readers are created using `strings.NewReader` and `os.Open`.
 All the inline keys can be read from file using `os.Open` and their readers
@@ -236,7 +237,8 @@ This is same as `golang.org/x/crypto/openpgp` but the commit information is
 implicit. Only an armored keyring is passed.
 
 An example commit object can be created and verified as:
-```golang
+
+{{< highlight go >}}
 ts := time.Unix(0000000000, 0)
 commit := &Commit{
     Hash:      plumbing.NewHash("8a9cea36fe052711fbc42b86e1f99a4fa0065deb"),
@@ -263,7 +265,7 @@ vLzAWdidLH2P+EUOqlNMuVScHYWD1FZB0/L5LJ8no5pTowQd2Z+Nggxl
     
 entity, err := commit.Verify(armoredKeyRing)
 ...
-```
+{{< /highlight >}}
 
 **NOTE**: The commit message contains a newline. While implementing this
 verification feature in go-git, I spent a long time debugging what was causing

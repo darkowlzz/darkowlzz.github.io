@@ -147,7 +147,8 @@ func (c *Tag) Verify(armoredKeyRing string) (*openpgp.Entity, error)
 ```
 
 An example tag object can be created and verified as:
-```golang
+
+{{< highlight go >}}
 ts := time.Unix(1511524851, 0)
 loc, _ := time.LoadLocation("Asia/Tokyo")
 tag := &Tag{
@@ -174,7 +175,7 @@ CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
 
 entity, err := tag.Verify(armoredKeyRing)
 ...
-```
+{{< /highlight >}}
 
 For details about creating `armoredKeyRing`, check the [Git Commit Signature Verification](/post/git-commit-signature-verification) post.
 
