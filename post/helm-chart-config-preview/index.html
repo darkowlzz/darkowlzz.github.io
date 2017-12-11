@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.24.1" />
+    <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helm Chart Config Preview | darkowlzz</title>
@@ -28,6 +28,7 @@ values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify a
 
 
 <meta property="article:published_time" content="2017-07-26T22:09:57&#43;05:30"/>
+
 <meta property="article:modified_time" content="2017-07-26T22:09:57&#43;05:30"/>
 
 
@@ -148,12 +149,13 @@ helm inspect [chart] shows the Chart.yaml and values.yaml content of a given cha
 values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .">
 
 
+<meta itemprop="datePublished" content="2017-07-26T22:09:57&#43;05:30" />
 <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30" />
 <meta itemprop="wordCount" content="233">
 
 
 
-<meta itemprop="keywords" content="automation,git,go,go-git,helm,k8s,minikube,security,travisci," />
+<meta itemprop="keywords" content="k8s,helm," />
 
     <header>
       <h1 itemprop="headline">Helm Chart Config Preview</h1>
@@ -187,24 +189,22 @@ given chart. The configurations are stored in <code>values.yaml</code> and
 <code>heml inspect values [chart]</code> shows only the content of <code>values.yaml</code>.</p>
 
 <p><code>values.yaml</code> of mariadb chart:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+image: bitnami/mariadb:<span style="color:#ae81ff">10.1</span>.<span style="color:#ae81ff">23</span>-r<span style="color:#ae81ff">2</span>
 
----
-image: bitnami/mariadb:10.1.23-r2
-
-## Specify an imagePullPolicy (Required)
+<span style="color:#75715e">## Specify an imagePullPolicy (Required)</span>
 imagePullPolicy: IfNotPresent
 
-## Specify password for root user
-# mariadbRootPassword:
+<span style="color:#75715e">## Specify password for root user</span>
+<span style="color:#75715e"># mariadbRootPassword:</span>
 
-## Create a database user
-# mariadbUser:
-# mariadbPassword:
+<span style="color:#75715e">## Create a database user</span>
+<span style="color:#75715e"># mariadbUser:</span>
+<span style="color:#75715e"># mariadbPassword:</span>
 
-## Create a database
-# mariadbDatabase:
-...
-</p>
+<span style="color:#75715e">## Create a database</span>
+<span style="color:#75715e"># mariadbDatabase:</span>
+...</code></pre></div></p>
 
 <p><a href="https://docs.helm.sh/using_helm/#customizing-the-chart-before-installing">Customizing the Chart Before Installing</a>
 describes how these configurations can be customized by passing a file name or
@@ -240,20 +240,25 @@ misconfiguration, the installation would fail.</p>
     
       <article>
         <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'darkowlzz-space';
-    var disqus_identifier = 'https:\/\/darkowlzz.github.io\/post\/helm-chart-config-preview\/';
-    var disqus_title = 'Helm Chart Config Preview';
-    var disqus_url = 'https:\/\/darkowlzz.github.io\/post\/helm-chart-config-preview\/';
-
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </article>
     
     <footer>

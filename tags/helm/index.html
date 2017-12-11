@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.24.1" />
+    <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helm | darkowlzz</title>
@@ -175,8 +175,7 @@ article [itemprop="description"] {
   <div itemprop="description">
     Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
 helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart:
---- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
+values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
   </div>
   
     <p><a itemprop="url" href="/post/helm-chart-config-preview/">Read More&nbsp;&raquo;</a></p>

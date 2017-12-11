@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta name="generator" content="Hugo 0.24.1" />
+    <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Securing Custom Deployments via Travis CI | darkowlzz</title>
@@ -26,6 +26,7 @@ Travis CI can be used as a publicly hosted deployment system with inbuilt suppor
 
 
 <meta property="article:published_time" content="2017-07-05T17:30:54&#43;05:30"/>
+
 <meta property="article:modified_time" content="2017-07-05T17:30:54&#43;05:30"/>
 
 
@@ -145,12 +146,13 @@ article [itemprop="description"] {
 Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.">
 
 
+<meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30" />
 <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30" />
 <meta itemprop="wordCount" content="514">
 
 
 
-<meta itemprop="keywords" content="automation,git,go,go-git,helm,k8s,minikube,security,travisci," />
+<meta itemprop="keywords" content="travisCI,automation,security," />
 
     <header>
       <h1 itemprop="headline">Securing Custom Deployments via Travis CI</h1>
@@ -199,13 +201,11 @@ as deployment scripts. Script execution commands can be added to any of the
 depending on the requirements. For a deployment script, <code>after_success</code> is a
 good place to run them.</p>
 
-
-# .travis.yml
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># .travis.yml</span>
 ...
 after_success:
     - ./scripts/deploy.sh
-...
-
+...</code></pre></div>
 
 <blockquote>
 <p><strong>The exit code of <code>after_success</code>, <code>after_failure</code>, <code>after_script</code> and
@@ -219,14 +219,12 @@ stages times out, the build is marked as a failure.</strong></p>
 variables in encrypted form. Encrypted env vars look like this in .travis.yml
 file:</p>
 
-
-# .travis.yml
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># .travis.yml</span>
 env:
   global:
-    - APP_NAME="foo"
-    - secure: "N79ZQG6jUTP5o0YSc1dTtb02PV+1j6sjM/DlvtCEcdaiPiEH"
-    - secure: "L08rVW1wuAz5P4j3yiAJkxG0Dog5cr8YSPzCCnguDrBy7Ok5"
-
+    - APP_NAME=<span style="color:#e6db74">&#34;foo&#34;</span>
+    - secure: <span style="color:#e6db74">&#34;N79ZQG6jUTP5o0YSc1dTtb02PV+1j6sjM/DlvtCEcdaiPiEH&#34;</span>
+    - secure: <span style="color:#e6db74">&#34;L08rVW1wuAz5P4j3yiAJkxG0Dog5cr8YSPzCCnguDrBy7Ok5&#34;</span></code></pre></div>
 
 <p>Even the variable names are not shown. To create encrypted variables, use <code>travis</code>
 cli. Refer their <a href="https://docs.travis-ci.com/user/encryption-keys">Encryption Key Guide</a>.</p>
@@ -258,21 +256,19 @@ certain conditions are met.</p>
 
 <p>For such scenarios, some conditions in the deployment script could be used.</p>
 
-
-if [ "$TRAVIS_BRANCH" != "$DEPLOY_BRANCH" ]; then
-    echo "Travis should only deploy from the DEPLOY_BRANCH ($DEPLOY_BRANCH) branch"
-    exit 0
-else
-    if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-        echo "Travis should not deploy from pull requests"
-        exit 0
-    else
-        # actually deploy
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$TRAVIS_BRANCH<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span>$DEPLOY_BRANCH<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo <span style="color:#e6db74">&#34;Travis should only deploy from the DEPLOY_BRANCH (</span>$DEPLOY_BRANCH<span style="color:#e6db74">) branch&#34;</span>
+    exit <span style="color:#ae81ff">0</span>
+<span style="color:#66d9ef">else</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$TRAVIS_PULL_REQUEST<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+        echo <span style="color:#e6db74">&#34;Travis should not deploy from pull requests&#34;</span>
+        exit <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">else</span>
+        <span style="color:#75715e"># actually deploy
+</span><span style="color:#75715e"></span>        .....
         .....
-        .....
-    fi
-fi
-
+    <span style="color:#66d9ef">fi</span>
+<span style="color:#66d9ef">fi</span></code></pre></div>
 
 <p>This would ensure that deployments are not triggered when a new branch is built
 and when a PR is sent. Preventing accidental deployments from branches by the
@@ -290,20 +286,25 @@ by <a href="https://github.com/haruair">haruair</a>. 🦉</p>
     
       <article>
         <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'darkowlzz-space';
-    var disqus_identifier = 'https:\/\/darkowlzz.github.io\/post\/securing-custom-deployments-via-travis-ci\/';
-    var disqus_title = 'Securing Custom Deployments via Travis CI';
-    var disqus_url = 'https:\/\/darkowlzz.github.io\/post\/securing-custom-deployments-via-travis-ci\/';
-
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
       </article>
     
     <footer>
