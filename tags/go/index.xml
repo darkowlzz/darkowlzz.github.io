@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on darkowlzz</title>
+    <link>https://darkowlzz.github.io/tags/go/</link>
+    <description>Recent content in Go on darkowlzz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Nov 2017 18:51:26 +0530</lastBuildDate>
+    
+	<atom:link href="https://darkowlzz.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Tag Signature Verification</title>
+      <link>https://darkowlzz.github.io/post/git-tag-signature-verification/</link>
+      <pubDate>Sat, 25 Nov 2017 18:51:26 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-tag-signature-verification/</guid>
+      <description>This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
+ Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .</description>
+    </item>
+    
+    <item>
+      <title>Git Commit Timestamp</title>
+      <link>https://darkowlzz.github.io/post/git-commit-timestamp/</link>
+      <pubDate>Fri, 24 Nov 2017 16:24:40 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-commit-timestamp/</guid>
+      <description>This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
+The previous post ended with an example of how to create a custom commit and run verification on it.
+ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash(&amp;quot;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&amp;quot;), Author: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.space&amp;quot;, When: ts}, Committer: Signature{Name: &amp;quot;darkowlzz&amp;quot;, Email: &amp;quot;example@darkowlzz.</description>
+    </item>
+    
+    <item>
+      <title>Git Commit Signature Verification</title>
+      <link>https://darkowlzz.github.io/post/git-commit-signature-verification/</link>
+      <pubDate>Thu, 23 Nov 2017 23:42:00 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-commit-signature-verification/</guid>
+      <description>This post is about PGP signature verification of git commits.
+ Verify by taking things apart Verify using git cli Verify using golang&amp;rsquo;s crypto/openpgp package Verify using src-d/go-git  Git commits and any kind of data can be signed using GPG (GNU Privacy Guard) program, available at https://www.gnupg.org/. It implements the OpenPGP standard for encryption.
+4 Things Data This is the data/content that is to be communicated or published and requires signing for verifiable authenticity.</description>
+    </item>
+    
+  </channel>
+</rss>
