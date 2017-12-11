@@ -2,6 +2,7 @@
 title: "Helm Chart Config Preview"
 date: 2017-07-26T22:09:57+05:30
 draft: false
+tags: ["k8s", "helm"]
 ---
 
 [Helm](https://github.com/kubernetes/helm) is a kubernetes(k8s) package manager

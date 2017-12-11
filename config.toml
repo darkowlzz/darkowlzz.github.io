@@ -5,6 +5,9 @@ theme = "after-dark"
 googleAnalytics = "UA-63771901-5"
 disqusShortname = "darkowlzz-space"
 
+[taxonomies]
+    tag = "tags"
+
 [params]
     site_title = "darkowlzz"
 

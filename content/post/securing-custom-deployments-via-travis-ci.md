@@ -2,6 +2,7 @@
 title: "Securing Custom Deployments via Travis CI"
 date: 2017-07-05T17:30:54+05:30
 draft: false
+tags: ["travisCI", "automation", "security"]
 ---
 
 * Custom Deployment

@@ -2,6 +2,7 @@
 title: "Minikube Config"
 date: 2017-07-24T13:48:53+05:30
 draft: false
+tags: ["k8s", "minikube"]
 ---
 
 Minikube is a kubernetes(k8s) project to enable running single node k8s cluster

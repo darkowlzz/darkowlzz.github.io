@@ -2,6 +2,7 @@
 title: "Git Commit Timestamp"
 date: 2017-11-24T16:24:40+05:30
 draft: false
+tags: ["git", "go-git", "go"]
 ---
 
 This is related to the previous post, [Git Commit Signature Verification](/post/git-commit-signature-verification).

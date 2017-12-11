@@ -2,6 +2,7 @@
 title: "Git Tag Signature Verification"
 date: 2017-11-25T18:51:26+05:30
 draft: false
+tags: ["git", "go-git", "go"]
 ---
 
 This post is also a sequel of other posts related to git and signature
