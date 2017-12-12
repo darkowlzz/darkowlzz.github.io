@@ -6,10 +6,21 @@
     <description>Recent content in Go on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Dec 2017 16:16:02 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 17:26:54 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Clean</title>
+      <link>https://darkowlzz.github.io/post/git-clean/</link>
+      <pubDate>Tue, 12 Dec 2017 17:26:54 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-clean/</guid>
+      <description>go-git now supports git-clean. Follow the &amp;ldquo;go-git&amp;rdquo; tag to read other go-git related posts.
+Git provides a way to clean the working tree by deleting any untracked files with the git clean command. By default, git clean would delete any untracked files. Untracked (empty) directories are not deleted. To delete them, -d option can be passed.
+Since clean can be harmful if not used carefully, git wouldn&amp;rsquo;t just delete the files.</description>
+    </item>
     
     <item>
       <title>Git Object Alternates</title>
