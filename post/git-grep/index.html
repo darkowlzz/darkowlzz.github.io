@@ -4,9 +4,10 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Tag Signature Verification | darkowlzz</title>
-    <meta name="description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
- Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .">
+    <title>Git Grep | darkowlzz</title>
+    <meta name="description" content="go-git now supports git-grep. Follow the &ldquo;go-git&rdquo; tag to read other go-git related posts.
+ git-grep The Amazing Worktree Grep Options Option Validation Grep Result  git-grep  git-grep - Print lines matching a pattern
+ git-scm.com   git-grep performs pattern matching in the tracked files in the work tree, blobs registered in the index files, or blobs in given tree objects. The result of match is sent to stdout, which consists of filename and content of the line.">
     <meta name="keywords" content="git, go-git, go">
     
     
@@ -17,17 +18,18 @@
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Git Tag Signature Verification" />
-<meta property="og:description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
- Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in ." />
+    <meta property="og:title" content="Git Grep" />
+<meta property="og:description" content="go-git now supports git-grep. Follow the &ldquo;go-git&rdquo; tag to read other go-git related posts.
+ git-grep The Amazing Worktree Grep Options Option Validation Grep Result  git-grep  git-grep - Print lines matching a pattern
+ git-scm.com   git-grep performs pattern matching in the tracked files in the work tree, blobs registered in the index files, or blobs in given tree objects. The result of match is sent to stdout, which consists of filename and content of the line." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/git-tag-signature-verification/" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/git-grep/" />
 
 
 
-<meta property="article:published_time" content="2017-11-25T18:51:26&#43;05:30"/>
+<meta property="article:published_time" content="2017-12-12T18:39:02&#43;05:30"/>
 
-<meta property="article:modified_time" content="2017-11-25T18:51:26&#43;05:30"/>
+<meta property="article:modified_time" content="2017-12-12T18:39:02&#43;05:30"/>
 
 
 
@@ -56,7 +58,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-    <link rel="canonical" href="https://darkowlzz.github.io/post/git-tag-signature-verification/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/git-grep/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -141,21 +143,22 @@ article [itemprop="description"] {
     <main>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     
-<meta itemprop="name" content="Git Tag Signature Verification">
-<meta itemprop="description" content="This post is also a sequel of other posts related to git and signature verification (Git Commit Signature Verification and Git Commit Timestamp). This one is based on adding tag signature verification in src-d/go-git.
- Verify by taking everything apart Verify using src-d/go-git  Git tags are signed similar to commits with small differences in their storage format. Like commit, which are stored in .git/objects/, tag are stored in .">
+<meta itemprop="name" content="Git Grep">
+<meta itemprop="description" content="go-git now supports git-grep. Follow the &ldquo;go-git&rdquo; tag to read other go-git related posts.
+ git-grep The Amazing Worktree Grep Options Option Validation Grep Result  git-grep  git-grep - Print lines matching a pattern
+ git-scm.com   git-grep performs pattern matching in the tracked files in the work tree, blobs registered in the index files, or blobs in given tree objects. The result of match is sent to stdout, which consists of filename and content of the line.">
 
 
-<meta itemprop="datePublished" content="2017-11-25T18:51:26&#43;05:30" />
-<meta itemprop="dateModified" content="2017-11-25T18:51:26&#43;05:30" />
-<meta itemprop="wordCount" content="545">
+<meta itemprop="datePublished" content="2017-12-12T18:39:02&#43;05:30" />
+<meta itemprop="dateModified" content="2017-12-12T18:39:02&#43;05:30" />
+<meta itemprop="wordCount" content="635">
 
 
 
 <meta itemprop="keywords" content="git,go-git,go," />
 
     <header>
-      <h1 itemprop="headline">Git Tag Signature Verification</h1>
+      <h1 itemprop="headline">Git Grep</h1>
       <p class="muted">
         <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
@@ -166,7 +169,7 @@ article [itemprop="description"] {
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2017-11-25T18:51:26&#43;05:30">25 Nov, 2017</time>
+  Published: <time datetime="2017-12-12T18:39:02&#43;05:30">12 Dec, 2017</time>
 
 
       </p>
@@ -177,177 +180,117 @@ article [itemprop="description"] {
     <div itemprop="articleBody">
       
 
-<p>This post is also a sequel of other posts related to git and signature
-verification
-(<a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>
-and <a href="/post/git-commit-timestamp">Git Commit Timestamp</a>). This one is based on
-adding tag signature verification in
-<a href="http://github.com/src-d/go-git">src-d/go-git</a>.</p>
+<p><a href="https://github.com/src-d/go-git">go-git</a> now supports <code>git-grep</code>. Follow the
+<a href="/tags/go-git/">&ldquo;go-git&rdquo;</a> tag to read other go-git related posts.</p>
 
 <ul>
-<li>Verify by taking everything apart</li>
-<li>Verify using src-d/go-git</li>
+<li>git-grep</li>
+<li>The Amazing Worktree</li>
+<li>Grep Options</li>
+<li>Option Validation</li>
+<li>Grep Result</li>
 </ul>
 
-<p>Git tags are signed similar to commits with small differences in their storage
-format. Like commit, which are stored in <code>.git/objects/</code>, tag are stored in
-<code>.git/refs/tags/</code>.</p>
+<h1 id="git-grep">git-grep</h1>
 
-<pre><code>$ ls .git/refs/tags/
-v0.1  v0.2  v0.3
+<blockquote>
+<p>git-grep - Print lines matching a pattern</p>
+
+<ul>
+<li>git-scm.com</li>
+</ul>
+</blockquote>
+
+<p>git-grep performs pattern matching in the tracked files in the work tree, blobs
+registered in the index files, or blobs in given tree objects. The result of
+match is sent to stdout, which consists of filename and content of
+the line. Some options can be passed to get more attribuets in the result.</p>
+
+<p>Example result:</p>
+
+<pre><code>$ git grep &quot;clean&quot;
+...
+content/post/git-clean.md:with the `git clean` command. By default, `git clean` would delete any untracked
+...
 </code></pre>
 
-<p>Since tags are fixed reference to git commits, these file contain hash of the
-commit they refer to.</p>
+<p>Internally, git performs a regex match of the provided pattern with all the
+tracked file content. The beauty of how this works lies in how the file content
+can be queried through the worktree. Instead of checking out to the given commit
+or reference and then searching through all the files, worktree is used to
+reach all the required files in their correct version.</p>
 
-<pre><code>$ cat .git/refs/tags/v0.1
-064f92fe00e70e6b64cb358a65039daa4b6ae8d2
-</code></pre>
+<h1 id="the-amazing-worktree">The Amazing Worktree</h1>
 
-<p>In this case, <code>064f92fe00e70e6b64cb358a65039daa4b6ae8d2</code> is the commit hash of
-the commit tag <code>v0.1</code> refers to.</p>
+<p>Git worktree maintains a collection of all the files in a repo at a given point.
+A commit, a branch, a tag, or any reference have their own worktree which
+consists of all the files in the repo at that reference. When, say a branch is
+checked out, worktree of that branch at a given commit is loaded and
+that becomes the current worktree.</p>
 
-<p>Also, in this case, <code>v0.1</code>, <code>v0.2</code> and <code>v0.3</code> point to the same commit but only
-tag <code>v0.2</code> is signed. <code>v0.1</code> and <code>v0.3</code>, not being signed have the same content.
-But <code>v0.2</code> contains a different hash. It contains hash of an actual tag object.</p>
+<p>In go-git, <code>Worktree</code> provides a way to get a tree, given a commit hash,
+<code>getTreeFromCommitHash()</code>. This can be used to obtain a tree and use it to
+perform grep on the tree, avoiding actual checkouts. No actual repo state change.
+The tree can provide a file iterator to traverse all the tree nodes, which are
+the files.</p>
 
-<pre><code>$ cat .git/refs/tags/v0.2
-5ec495852a6ca4f4082cc86b11d56c732b5ece4b
+<p>To implement this in go-git, <code>GrepOptions</code> and <code>GrepResult</code> types were created
+to store all the options and result of the operation respectively.</p>
 
-$ cat .git/refs/tags/v0.3
-064f92fe00e70e6b64cb358a65039daa4b6ae8d2
-</code></pre>
+<h1 id="grep-options">Grep Options</h1>
 
-<p>Reading the commit hash of unsigned tag with <code>cat-file</code> shows the commit object
-content.</p>
+<p>go-git <code>GrepOptions</code> consists of <code>Pattern</code>, <code>PathSpec</code>, <code>InvertMatch</code>,
+<code>CommitHash</code> and <code>ReferenceName</code>. An example of a <code>GrepOptions</code> is:</p>
 
-<pre><code>$ git cat-file -p 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
-tree 2ff896e009f8b165bb36583653e2868c30eb4127
-parent d2ae550ad09a39d67ca18afbd300ce83d90f30a1
-author Sunny &lt;example@darkowlzz.space&gt; 1511523499 +0000
-committer Sunny &lt;example@darkowlzz.space&gt; 1511523499 +0000
-gpgsig -----BEGIN PGP SIGNATURE-----
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">opts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">GrepOptions</span>{
+	<span style="color:#a6e22e">Pattern</span>:    <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;import&#34;</span>),
+    <span style="color:#a6e22e">CommitHash</span>: <span style="color:#a6e22e">plumbing</span>.<span style="color:#a6e22e">NewHash</span>(<span style="color:#e6db74">&#34;2d55a722f3c3ecc36da919dfd8b6de38352f3507&#34;</span>)
+	<span style="color:#a6e22e">PathSpec</span>:   <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;go/&#34;</span>),
+}</code></pre></div>
 
- iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYBLcTHG1lQGRhcmtv
- d2x6ei5zcGFjZQAKCRBDIt4ypybJTlD6CACEaXd+yoFGMJdtan475CfkgiEc90/3
- W2iIKRvU8sBogfDtfZxYb02RKiemxbaBgTKJDoW7Nzn+XitSNtwHwcUZpNv3dm0g
- Dx46KV090Hv8lJbKFwaORJ8FrGhtOpSluN7l/zY9cmVU6ltInWwnj3l/7Pp89hnA
- 9ir/nrtwliJEyRG8D1nbs8cg7F2Gg5BJwSAfM5F0pCj2ka99vIyHHMSRl7zrln0n
- eGObrsjN+EG784uvpOSyquejC02tRrcauLkbz5HmcXkzq8F4QFpcOWVwEbbR1dqB
- lLFrbzXa4h5kvexMofJoCFT8zTLpRQXO6lD4OoCkFn+IqPMRLaJ1GFr8
- =LU+k
- -----END PGP SIGNATURE-----
+<p>This <code>GrepOptions</code> tells go-git to match the <code>Pattern</code> at the tree of
+<code>CommitHash</code> and only with the files with path matching the <code>PathSpec</code>.</p>
 
-Some commit message
-</code></pre>
+<p>Since it&rsquo;s a library, instead of accepting raw strings as pattern and pathspec,
+it accepts pre-compiled regexp objects.</p>
 
-<p>And reading the hash of signed tag shows the content of a tag object.</p>
+<h1 id="option-validation">Option Validation</h1>
 
-<pre><code>$ git cat-file -p 5ec495852a6ca4f4082cc86b11d56c732b5ece4b
-object 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
-type commit
-tag v0.2
-tagger Sunny &lt;example@darkowlzz.space&gt; 1511524851 +0000
+<p>The <code>GrepOptions</code> is validated to ensure that the passed options are not
+ambiguous. For example, passing a commit hash and a reference is ambiguous.
+Also, if no commit hash or reference is passed, the <code>HEAD</code> tree of repo is used.</p>
 
-Some tag message
------BEGIN PGP SIGNATURE-----
+<h1 id="grep-results">Grep Results</h1>
 
-iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
-d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
-sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
-GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
-OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
-nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
-CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
-=l75D
------END PGP SIGNATURE-----
-</code></pre>
+<p>Results of git-grep are strings sent to stdout, but that can&rsquo;t be done in case
+of go-git. Since it&rsquo;s a library, it returns a type <code>GrepResult</code>, consisting of
+all the attributes of the result.</p>
 
-<p>A signed tag object contains <code>object</code>, <code>type</code>, <code>tagger</code>, tag message/comment
-and signature. Value of <code>object</code> is the same as the commit hash the tag
-refers to.</p>
+<p><code>GrepResult</code> contains <code>FileName</code>, <code>LineNumber</code>, <code>Content</code> and <code>TreeName</code>. The
+result of a grep in go-git is an slice of <code>GrepResult</code>.</p>
 
-<p>Apart from the attributes of tag object and commit object, signature is at the
-bottom in a tag object but in a commit object, signature is above message.</p>
+<p>Example usage:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">r</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">git</span>.<span style="color:#a6e22e">PlainOpen</span>(<span style="color:#e6db74">&#34;path/to/a/git/repo&#34;</span>)
+<span style="color:#a6e22e">worktree</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Worktree</span>()
+<span style="color:#a6e22e">grepResults</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">worktree</span>.<span style="color:#a6e22e">Grep</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">git</span>.<span style="color:#a6e22e">GrepOptions</span>{
+    <span style="color:#a6e22e">Pattern</span>: <span style="color:#a6e22e">regexp</span>.<span style="color:#a6e22e">MustCompile</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>),
+    <span style="color:#a6e22e">InvertMatch</span>: <span style="color:#66d9ef">true</span>,
+})</code></pre></div></p>
 
-<h1 id="verify-by-taking-things-apart">Verify by taking things apart</h1>
+<p><code>Grep()</code> is a method of <code>Worktee</code>, similar to <code>Clean()</code>. A lot of the operations
+are performed on worktree.</p>
 
-<p>Similar to <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>,
-to perform a manual signature verification by taking things apart, create a
-file, say <code>tag.txt</code> and copy the tag content except the signature.</p>
+<p>Like in case of git-clean, even this is not a complete implementation of
+git-grep, for the same reasons, keeping it simple. Right now, it supports passing
+a single pattern in <code>Pattern</code> and <code>PathSpec</code>, it should be able to accept slice
+of patterns. It can&rsquo;t perform grep on untracked files. All these and more would
+be added on top of this base implementation.</p>
 
-<pre><code>$ git cat-file -p 5ec495852a6ca4f4082cc86b11d56c732b5ece4b
-object 064f92fe00e70e6b64cb358a65039daa4b6ae8d2
-type commit
-tag v0.2
-tagger Sunny &lt;example@darkowlzz.space&gt; 1511524851 +0000
-
-Some tag message
-</code></pre>
-
-<p>Create another file <code>doc.sig</code> and copy the signature only.</p>
-
-<pre><code>-----BEGIN PGP SIGNATURE-----
-
-iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
-d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
-sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
-GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
-OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
-nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
-CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
-=l75D
------END PGP SIGNATURE-----
-</code></pre>
-
-<p>To verify that the tag has not been tampered and it&rsquo;s signed by the person who
-says to have, run:</p>
-
-<pre><code>$ gpg --verify doc.sig tag.txt
-</code></pre>
-
-<p>Ensure that the public key of the signer is in gpg keyring before verifying.</p>
-
-<h1 id="verify-using-src-d-go-git">Verify using src-d/go-git</h1>
-
-<p><code>gopkg.in/src-d/go-git.v4/plumbing/object</code>&rsquo;s Tag type has <code>Verify</code> method now,
-to perform signature verification of a tag, given an armored keyring.</p>
-
-<pre><code>func (c *Tag) Verify(armoredKeyRing string) (*openpgp.Entity, error)
-</code></pre>
-
-<p>An example tag object can be created and verified as:</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#ae81ff">1511524851</span>, <span style="color:#ae81ff">0</span>)
-<span style="color:#a6e22e">loc</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">LoadLocation</span>(<span style="color:#e6db74">&#34;Asia/Tokyo&#34;</span>)
-<span style="color:#a6e22e">tag</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Tag</span>{
-    <span style="color:#a6e22e">Name</span>:   <span style="color:#e6db74">&#34;v0.2&#34;</span>,
-    <span style="color:#a6e22e">Tagger</span>: <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Sunny&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>.<span style="color:#a6e22e">In</span>(<span style="color:#a6e22e">loc</span>)},
-    <span style="color:#a6e22e">Message</span>: <span style="color:#e6db74">`This is a signed tag
-</span><span style="color:#e6db74">`</span>,
-    <span style="color:#a6e22e">TargetType</span>: <span style="color:#a6e22e">plumbing</span>.<span style="color:#a6e22e">CommitObject</span>,
-    <span style="color:#a6e22e">Target</span>:     <span style="color:#a6e22e">plumbing</span>.<span style="color:#a6e22e">NewHash</span>(<span style="color:#e6db74">&#34;064f92fe00e70e6b64cb358a65039daa4b6ae8d2&#34;</span>),
-    <span style="color:#a6e22e">PGPSignature</span>: <span style="color:#e6db74">`
-</span><span style="color:#e6db74">-----BEGIN PGP SIGNATURE-----
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">iQFHBAABCAAxFiEEoRt6IzxHaZkkUslhQyLeMqcmyU4FAloYCg8THG1lQGRhcmtv
-</span><span style="color:#e6db74">d2x6ei5zcGFjZQAKCRBDIt4ypybJTs0cCACjQZe2610t3gfbUPbgQiWDL9uvlCeb
-</span><span style="color:#e6db74">sNSeTC6hLAFSvHTMqLr/6RpiLlfQXyATD7TZUH0DUSLsERLheG82OgVxkOTzPCpy
-</span><span style="color:#e6db74">GL6iGKeZ4eZ1KiV+SBPjqizC9ShhGooPUw9oUSVdj4jsaHDdDHtY63Pjl0KvJmms
-</span><span style="color:#e6db74">OVi9SSxjeMbmaC81C8r0ZuOLTXJh/JRKh2BsehdcnK3736BK+16YRD7ugXLpkQ5d
-</span><span style="color:#e6db74">nsCFVbuYYoLMoJL5NmEun0pbUrpY+MI8VPK0f9HV5NeaC4NksC+ke/xYMT+P2lRL
-</span><span style="color:#e6db74">CN+9zcCIU+mXr2fCl1xOQcnQzwOElObDxpDcPcxVn0X+AhmPc+uj0mqD
-</span><span style="color:#e6db74">=l75D
-</span><span style="color:#e6db74">-----END PGP SIGNATURE-----
-</span><span style="color:#e6db74">`</span>,
-}
-
-<span style="color:#a6e22e">entity</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">tag</span>.<span style="color:#a6e22e">Verify</span>(<span style="color:#a6e22e">armoredKeyRing</span>)
-<span style="color:#f92672">...</span></code></pre></div>
-
-<p>For details about creating <code>armoredKeyRing</code>, check the <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a> post.</p>
-
-<p>Also, like commit message, a tag message too ends with a newline.</p>
+<p>go-git is a really nice project to contribute by implementing well known
+concepts of git. And the maintainers are great with their quick reviews and
+responses. Thanks to their years of work in the underlying plumbing, things like
+<code>Worktree</code>, all the git <code>Objects</code>, <code>Storer</code>, etc simplify implementation of
+various operations on top.</p>
 
     </div>
     
@@ -383,14 +326,14 @@ to perform signature verification of a tag, given an armored keyring.</p>
       by <span itemprop="author"></span>
     
   
-  <time datetime="2017-11-25T18:51:26&#43;05:30">
-    25 Nov, 2017
+  <time datetime="2017-12-12T18:39:02&#43;05:30">
+    12 Dec, 2017
   </time>
   
   
     and tagged <a href="/tags/git/">git</a>, <a href="/tags/go/">go</a> and <a href="/tags/go-git/">go-git</a>
   
-  using <span itemprop="wordCount">545</span> words.
+  using <span itemprop="wordCount">635</span> words.
 </p>
 
       
@@ -403,11 +346,11 @@ to perform signature verification of a tag, given an armored keyring.</p>
     <ul>
       
       
-        <li><a href="/post/git-grep/">Git Grep</a> &ndash; 3 minutes
-      
         <li><a href="/post/git-clean/">Git Clean</a> &ndash; 2 minutes
       
         <li><a href="/post/git-object-alternates/">Git Object Alternates</a> &ndash; 2 minutes
+      
+        <li><a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a> &ndash; 3 minutes
       
         <li><a href="/post/git-commit-timestamp/">Git Commit Timestamp</a> &ndash; 2 minutes
       

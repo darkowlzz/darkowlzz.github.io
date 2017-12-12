@@ -6,10 +6,21 @@
     <description>Recent content in Go on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Dec 2017 17:26:54 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 18:39:02 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git Grep</title>
+      <link>https://darkowlzz.github.io/post/git-grep/</link>
+      <pubDate>Tue, 12 Dec 2017 18:39:02 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/git-grep/</guid>
+      <description>go-git now supports git-grep. Follow the &amp;ldquo;go-git&amp;rdquo; tag to read other go-git related posts.
+ git-grep The Amazing Worktree Grep Options Option Validation Grep Result  git-grep  git-grep - Print lines matching a pattern
+ git-scm.com   git-grep performs pattern matching in the tracked files in the work tree, blobs registered in the index files, or blobs in given tree objects. The result of match is sent to stdout, which consists of filename and content of the line.</description>
+    </item>
     
     <item>
       <title>Git Clean</title>
