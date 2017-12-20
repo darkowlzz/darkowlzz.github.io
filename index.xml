@@ -6,10 +6,20 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Dec 2017 18:39:02 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 23:36:25 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dep - Picking Version From Gopath</title>
+      <link>https://darkowlzz.github.io/post/dep-picking-version-from-gopath/</link>
+      <pubDate>Wed, 20 Dec 2017 23:36:25 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/dep-picking-version-from-gopath/</guid>
+      <description>This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing.</description>
+    </item>
     
     <item>
       <title>Git Grep</title>

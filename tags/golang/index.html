@@ -4,33 +4,28 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Commit Timestamp | darkowlzz</title>
-    <meta name="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.">
-    <meta name="keywords" content="git, go-git, go">
+    <title>Golang | darkowlzz</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     
     
     
+    
+      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Git Commit Timestamp" />
-<meta property="og:description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/git-commit-timestamp/" />
+    <meta property="og:title" content="Golang" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://darkowlzz.github.io/tags/golang/" />
 
 
 
-<meta property="article:published_time" content="2017-11-24T16:24:40&#43;05:30"/>
-
-<meta property="article:modified_time" content="2017-11-24T16:24:40&#43;05:30"/>
-
+<meta property="og:updated_time" content="2017-12-20T23:36:25&#43;05:30"/>
 
 
 
@@ -58,7 +53,9 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-    <link rel="canonical" href="https://darkowlzz.github.io/post/git-commit-timestamp/">
+      <link href="https://darkowlzz.github.io/tags/golang/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
+    
+    <link rel="canonical" href="https://darkowlzz.github.io/tags/golang/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -137,30 +134,30 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
-  <a href="/">darkowlzz</a>
   
+  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+    
+    
+      <a itemprop="url" class="" href="/"><span itemprop="name">Home</span></a>
+    
+      <a itemprop="url" class="" href="/about/me"><span itemprop="name">About</span></a>
+    
+  </nav>
+
+
 </header>
     <main>
-  <article itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h1>Golang</h1>
+  </header>
+  
+    <article itemscope itemtype="http://schema.org/CreativeWork">
+  <header>
+    <h2 itemprop="name">
+      <a href="/post/dep-picking-version-from-gopath/">dep - Picking Version From Gopath</a>
+    </h2>
     
-<meta itemprop="name" content="Git Commit Timestamp">
-<meta itemprop="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.">
-
-
-<meta itemprop="datePublished" content="2017-11-24T16:24:40&#43;05:30" />
-<meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30" />
-<meta itemprop="wordCount" content="272">
-
-
-
-<meta itemprop="keywords" content="git,go-git,go," />
-
-    <header>
-      <h1 itemprop="headline">Git Commit Timestamp</h1>
-      <p class="muted">
-        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
@@ -169,139 +166,36 @@ ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#3
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2017-11-24T16:24:40&#43;05:30">24 Nov, 2017</time>
+  Published: <time datetime="2017-12-20T23:36:25&#43;05:30">20 Dec, 2017</time>
 
-
-      </p>
-    </header>
-    
-    
-
-    <div itemprop="articleBody">
-      <p>This is related to the previous post, <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>.
-That post was based on the work of implementing git commit signature
-verification in <a href="http://github.com/src-d/go-git">src-d/go-git</a>. This post is a
-sequel to that in a way.</p>
-
-<p>The previous post ended with an example of how to create a custom commit and
-run verification on it.</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#ae81ff">0000000000</span>, <span style="color:#ae81ff">0</span>)
-<span style="color:#a6e22e">commit</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Commit</span>{
-    <span style="color:#a6e22e">Hash</span>:      <span style="color:#a6e22e">plumbing</span>.<span style="color:#a6e22e">NewHash</span>(<span style="color:#e6db74">&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;</span>),
-    <span style="color:#a6e22e">Author</span>:    <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>},
-    <span style="color:#a6e22e">Committer</span>: <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>},
-    <span style="color:#a6e22e">Message</span>: <span style="color:#e6db74">`status: simplify template command selection
-</span><span style="color:#e6db74">`</span>,
-    <span style="color:#f92672">...</span>
-}</code></pre></div>
-
-<p>The problem here is that the timestamp being added to the commit has no location
-attached to it. Hence, it uses the local timezone of the machine where it runs.
-Due to this, the test started failing when run on machines in different
-timezones.</p>
-
-<p>The signature that was generated was against a fixed timezone and the above code
-would change the commit timezone everytime it runs depending on the location of
-the machine.</p>
-
-<p>Git commits are written with timestamps containing the timezone of the machine.
-Once written, it&rsquo;s not regenerated or changed by normal reading operations.</p>
-
-<pre><code>commit 13df556177b33fcfe1187343bd54837e48ec0b52
-Merge: 9d269a6 770a444
-Author: -------------------------
-Date:   Mon Nov 20 13:28:18 2017 -0500
-</code></pre>
-
-<p>A fix for the above issue would be to add a fixed location to the created
-timestamp.</p>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">loc</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">LoadLocation</span>(<span style="color:#e6db74">&#34;Asia/Tokyo&#34;</span>)
-<span style="color:#f92672">...</span>
-    <span style="color:#a6e22e">Author</span>:    <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>.<span style="color:#a6e22e">In</span>(<span style="color:#a6e22e">loc</span>)},
-    <span style="color:#f92672">...</span></code></pre></div></p>
-
-<p>That would ensure that the timestamp is always the same in that commit.</p>
-
-<p>The previous post had a note about signature verification failure due to an
-invisible newline at the end of commit message, this post highlights another
-reason for the verification to fail, timestamp.</p>
-
-    </div>
-    
-      <article>
-        <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-      </article>
-    
-    <footer>
-      <hr>
-      <p>
-  Published
-  
-    
-      by <span itemprop="author"></span>
-    
-  
-  <time datetime="2017-11-24T16:24:40&#43;05:30">
-    24 Nov, 2017
-  </time>
-  
-  
-    and tagged <a href="/tags/git/">git</a>, <a href="/tags/go/">go</a> and <a href="/tags/go-git/">go-git</a>
-  
-  using <span itemprop="wordCount">272</span> words.
 </p>
-
-      
+    
+  </header>
   
+  <div itemprop="description">
+    This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing.
+  </div>
+  
+    <p><a itemprop="url" href="/post/dep-picking-version-from-gopath/">Read More&nbsp;&raquo;</a></p>
+  
+  <meta itemprop="inLanguage" content="en-us">
+  <meta itemprop="datePublished" content="2017-12-20T23:36:25&#43;05:30">
+  <meta itemprop="dateModified" content="2017-12-20T23:36:25&#43;05:30">
+  
+</article>
 
-
-
-  <aside>
-    <header>Related Content</header>
-    <ul>
-      
-      
-        <li><a href="/post/dep-picking-version-from-gopath/">dep - Picking Version From Gopath</a> &ndash; 2 minutes
-      
-        <li><a href="/post/git-grep/">Git Grep</a> &ndash; 3 minutes
-      
-        <li><a href="/post/git-clean/">Git Clean</a> &ndash; 2 minutes
-      
-        <li><a href="/post/git-object-alternates/">Git Object Alternates</a> &ndash; 2 minutes
-      
-        <li><a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a> &ndash; 3 minutes
-      
-        <li><a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a> &ndash; 6 minutes
-      
-    </ul>
-  </aside>
-
-
-    </footer>
-  </article>
+  
 </main>
     <footer>
+  <nav>
+  <p>
+    
+    <span>Page 1 of 1</span>
+    
+  </p>
+</nav>
+
   
   <p class="muted">
     This page was generated using

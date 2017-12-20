@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dep on darkowlzz</title>
+    <link>https://darkowlzz.github.io/tags/dep/</link>
+    <description>Recent content in Dep on darkowlzz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 Dec 2017 23:36:25 +0530</lastBuildDate>
+    
+	<atom:link href="https://darkowlzz.github.io/tags/dep/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dep - Picking Version From Gopath</title>
+      <link>https://darkowlzz.github.io/post/dep-picking-version-from-gopath/</link>
+      <pubDate>Wed, 20 Dec 2017 23:36:25 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/dep-picking-version-from-gopath/</guid>
+      <description>This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing.</description>
+    </item>
+    
+  </channel>
+</rss>

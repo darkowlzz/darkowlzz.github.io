@@ -4,11 +4,10 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git Commit Timestamp | darkowlzz</title>
-    <meta name="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.">
-    <meta name="keywords" content="git, go-git, go">
+    <title>dep - Picking Version From Gopath | darkowlzz</title>
+    <meta name="description" content="This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing.">
+    <meta name="keywords" content="dep, golang, go">
     
     
     
@@ -18,18 +17,17 @@ ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#3
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Git Commit Timestamp" />
-<meta property="og:description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz." />
+    <meta property="og:title" content="dep - Picking Version From Gopath" />
+<meta property="og:description" content="This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/git-commit-timestamp/" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/dep-picking-version-from-gopath/" />
 
 
 
-<meta property="article:published_time" content="2017-11-24T16:24:40&#43;05:30"/>
+<meta property="article:published_time" content="2017-12-20T23:36:25&#43;05:30"/>
 
-<meta property="article:modified_time" content="2017-11-24T16:24:40&#43;05:30"/>
+<meta property="article:modified_time" content="2017-12-20T23:36:25&#43;05:30"/>
 
 
 
@@ -58,7 +56,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-    <link rel="canonical" href="https://darkowlzz.github.io/post/git-commit-timestamp/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/dep-picking-version-from-gopath/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -143,22 +141,21 @@ article [itemprop="description"] {
     <main>
   <article itemscope itemtype="http://schema.org/BlogPosting">
     
-<meta itemprop="name" content="Git Commit Timestamp">
-<meta itemprop="description" content="This is related to the previous post, Git Commit Signature Verification. That post was based on the work of implementing git commit signature verification in src-d/go-git. This post is a sequel to that in a way.
-The previous post ended with an example of how to create a custom commit and run verification on it.
-ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;), Author: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.space&#34;, When: ts}, Committer: Signature{Name: &#34;darkowlzz&#34;, Email: &#34;example@darkowlzz.">
+<meta itemprop="name" content="dep - Picking Version From Gopath">
+<meta itemprop="description" content="This post is about a feature in golang/dep that could be used by developers who are not using vendor directory to vendor their dependencies, but depend on the version of the dependencies checked out in their GOPATH.
+dep provides a subcommand, dep init, for initializing a go project to use dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file, called Gopkg.lock. These files contain details about all the dependencies analyzed by dep while initializing.">
 
 
-<meta itemprop="datePublished" content="2017-11-24T16:24:40&#43;05:30" />
-<meta itemprop="dateModified" content="2017-11-24T16:24:40&#43;05:30" />
-<meta itemprop="wordCount" content="272">
+<meta itemprop="datePublished" content="2017-12-20T23:36:25&#43;05:30" />
+<meta itemprop="dateModified" content="2017-12-20T23:36:25&#43;05:30" />
+<meta itemprop="wordCount" content="260">
 
 
 
-<meta itemprop="keywords" content="git,go-git,go," />
+<meta itemprop="keywords" content="dep,golang,go," />
 
     <header>
-      <h1 itemprop="headline">Git Commit Timestamp</h1>
+      <h1 itemprop="headline">dep - Picking Version From Gopath</h1>
       <p class="muted">
         <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
@@ -169,7 +166,7 @@ ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#3
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2017-11-24T16:24:40&#43;05:30">24 Nov, 2017</time>
+  Published: <time datetime="2017-12-20T23:36:25&#43;05:30">20 Dec, 2017</time>
 
 
       </p>
@@ -178,55 +175,29 @@ ts := time.Unix(0000000000, 0) commit := &amp;Commit{ Hash: plumbing.NewHash(&#3
     
 
     <div itemprop="articleBody">
-      <p>This is related to the previous post, <a href="/post/git-commit-signature-verification">Git Commit Signature Verification</a>.
-That post was based on the work of implementing git commit signature
-verification in <a href="http://github.com/src-d/go-git">src-d/go-git</a>. This post is a
-sequel to that in a way.</p>
+      <p>This post is about a feature in golang/dep that could be used by developers
+who are not using vendor directory to vendor their dependencies, but depend on
+the version of the dependencies checked out in their GOPATH.</p>
 
-<p>The previous post ended with an example of how to create a custom commit and
-run verification on it.</p>
+<p><code>dep</code> provides a subcommand, <code>dep init</code>, for initializing a go project to use
+dep. It creates two files, a manifest file, called Gopkg.toml, and a lock file,
+called Gopkg.lock. These files contain details about all the dependencies
+analyzed by dep while initializing.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">ts</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Unix</span>(<span style="color:#ae81ff">0000000000</span>, <span style="color:#ae81ff">0</span>)
-<span style="color:#a6e22e">commit</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Commit</span>{
-    <span style="color:#a6e22e">Hash</span>:      <span style="color:#a6e22e">plumbing</span>.<span style="color:#a6e22e">NewHash</span>(<span style="color:#e6db74">&#34;8a9cea36fe052711fbc42b86e1f99a4fa0065deb&#34;</span>),
-    <span style="color:#a6e22e">Author</span>:    <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>},
-    <span style="color:#a6e22e">Committer</span>: <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>},
-    <span style="color:#a6e22e">Message</span>: <span style="color:#e6db74">`status: simplify template command selection
-</span><span style="color:#e6db74">`</span>,
-    <span style="color:#f92672">...</span>
-}</code></pre></div>
+<p>By default, <code>init</code> would reach out to the network and check for the latest
+available version of the dependencies of the project and set some default
+constraints for those dependencies in the manifest. But this behavior might not
+work for everyone. For those who do not use vendor directory to keep their
+dependencies or any other vendoring tools, and depend on the checked out version
+of the projects in their GOPATH, <code>init</code> provides a flag to make thing easy.</p>
 
-<p>The problem here is that the timestamp being added to the commit has no location
-attached to it. Hence, it uses the local timezone of the machine where it runs.
-Due to this, the test started failing when run on machines in different
-timezones.</p>
-
-<p>The signature that was generated was against a fixed timezone and the above code
-would change the commit timezone everytime it runs depending on the location of
-the machine.</p>
-
-<p>Git commits are written with timestamps containing the timezone of the machine.
-Once written, it&rsquo;s not regenerated or changed by normal reading operations.</p>
-
-<pre><code>commit 13df556177b33fcfe1187343bd54837e48ec0b52
-Merge: 9d269a6 770a444
-Author: -------------------------
-Date:   Mon Nov 20 13:28:18 2017 -0500
-</code></pre>
-
-<p>A fix for the above issue would be to add a fixed location to the created
-timestamp.</p>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">loc</span>, <span style="color:#a6e22e">_</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">LoadLocation</span>(<span style="color:#e6db74">&#34;Asia/Tokyo&#34;</span>)
-<span style="color:#f92672">...</span>
-    <span style="color:#a6e22e">Author</span>:    <span style="color:#a6e22e">Signature</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;darkowlzz&#34;</span>, <span style="color:#a6e22e">Email</span>: <span style="color:#e6db74">&#34;example@darkowlzz.space&#34;</span>, <span style="color:#a6e22e">When</span>: <span style="color:#a6e22e">ts</span>.<span style="color:#a6e22e">In</span>(<span style="color:#a6e22e">loc</span>)},
-    <span style="color:#f92672">...</span></code></pre></div></p>
-
-<p>That would ensure that the timestamp is always the same in that commit.</p>
-
-<p>The previous post had a note about signature verification failure due to an
-invisible newline at the end of commit message, this post highlights another
-reason for the verification to fail, timestamp.</p>
+<p><code>dep init -gopath</code> can be used to tell dep to initialize the project, but check
+GOPATH to get the version of the projects. This would still download the whole
+VCS source of the projects and store in dep&rsquo;s cache, but it would set the
+constraints to what was in the projects in GOPATH. It doesn&rsquo;t reuse the source
+of the projects in GOPATH, only hints from the VCS to figure out the version of
+the projects. And when it can&rsquo;t find the project in GOPATH, it would fallback
+to the default behavior and look for the latest available version of the project.</p>
 
     </div>
     
@@ -262,14 +233,14 @@ reason for the verification to fail, timestamp.</p>
       by <span itemprop="author"></span>
     
   
-  <time datetime="2017-11-24T16:24:40&#43;05:30">
-    24 Nov, 2017
+  <time datetime="2017-12-20T23:36:25&#43;05:30">
+    20 Dec, 2017
   </time>
   
   
-    and tagged <a href="/tags/git/">git</a>, <a href="/tags/go/">go</a> and <a href="/tags/go-git/">go-git</a>
+    and tagged <a href="/tags/dep/">dep</a>, <a href="/tags/go/">go</a> and <a href="/tags/golang/">golang</a>
   
-  using <span itemprop="wordCount">272</span> words.
+  using <span itemprop="wordCount">260</span> words.
 </p>
 
       
@@ -282,8 +253,6 @@ reason for the verification to fail, timestamp.</p>
     <ul>
       
       
-        <li><a href="/post/dep-picking-version-from-gopath/">dep - Picking Version From Gopath</a> &ndash; 2 minutes
-      
         <li><a href="/post/git-grep/">Git Grep</a> &ndash; 3 minutes
       
         <li><a href="/post/git-clean/">Git Clean</a> &ndash; 2 minutes
@@ -291,6 +260,8 @@ reason for the verification to fail, timestamp.</p>
         <li><a href="/post/git-object-alternates/">Git Object Alternates</a> &ndash; 2 minutes
       
         <li><a href="/post/git-tag-signature-verification/">Git Tag Signature Verification</a> &ndash; 3 minutes
+      
+        <li><a href="/post/git-commit-timestamp/">Git Commit Timestamp</a> &ndash; 2 minutes
       
         <li><a href="/post/git-commit-signature-verification/">Git Commit Signature Verification</a> &ndash; 6 minutes
       
