@@ -14,4 +14,4 @@ draft: false
 
 [Old Logs](https://codingowl.tumblr.com)
 
-[email](http://www.google.com/recaptcha/mailhide/d?k=01DkxhyZ2WNortszE1T-KMLw==&c=08NixjFAT_5i4MC2mvO37nEgkfaGoQKgloChrS4Zo6w=)
+[Email](http://www.google.com/recaptcha/mailhide/d?k=01DkxhyZ2WNortszE1T-KMLw==&c=08NixjFAT_5i4MC2mvO37nEgkfaGoQKgloChrS4Zo6w=)
