@@ -1,5 +1,5 @@
 ---
-title: "Git Grep"
+title: "go-git - Grep"
 date: 2017-12-12T18:39:02+05:30
 draft: false
 tags: ["git", "go-git", "go"]

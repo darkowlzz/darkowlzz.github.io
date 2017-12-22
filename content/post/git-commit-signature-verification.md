@@ -1,5 +1,5 @@
 ---
-title: "Git Commit Signature Verification"
+title: "go-git - Commit Signature Verification"
 date: 2017-11-23T23:42:00+05:30
 draft: false
 tags: ["git", "go-git", "go"]

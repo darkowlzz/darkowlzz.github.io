@@ -1,5 +1,5 @@
 ---
-title: "Git Object Alternates"
+title: "go-git - Object Alternates"
 date: 2017-12-11T16:16:02+05:30
 draft: false
 tags: ["git", "go-git", "go"]

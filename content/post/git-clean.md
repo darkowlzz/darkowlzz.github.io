@@ -1,5 +1,5 @@
 ---
-title: "Git Clean"
+title: "go-git - Clean"
 date: 2017-12-12T17:26:54+05:30
 draft: false
 tags: ["git", "go-git", "go"]

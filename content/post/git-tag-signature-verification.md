@@ -1,5 +1,5 @@
 ---
-title: "Git Tag Signature Verification"
+title: "go-git - Tag Signature Verification"
 date: 2017-11-25T18:51:26+05:30
 draft: false
 tags: ["git", "go-git", "go"]
