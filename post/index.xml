@@ -6,10 +6,20 @@
     <description>Recent content in Posts on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2017 23:36:25 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 22 Dec 2017 23:06:59 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dep - Pin Executable Version</title>
+      <link>https://darkowlzz.github.io/post/dep-pin-executable-version/</link>
+      <pubDate>Fri, 22 Dec 2017 23:06:59 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/dep-pin-executable-version/</guid>
+      <description>Along with managing project dependencies, dep also provides a way to manage the development tools (linters, generators, etc) to be used with the project. This can be done by adding the tool&amp;rsquo;s full package path in the required field in the manifest file (Gopkg.toml). Unlike other fields, required considers packages, not project. Hence, if a project wants to install a tool, say dep, required should contain github.com/golang/dep/cmd/dep.
+required = [&amp;quot;github.com/golang/dep/cmd/dep&amp;quot;]  If a project doesn&amp;rsquo;t contain any import path of a package, required field can be used to tell dep to include that.</description>
+    </item>
     
     <item>
       <title>dep - Picking Version From GOPATH</title>
