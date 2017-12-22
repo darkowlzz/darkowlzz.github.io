@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Git Grep</title>
+      <title>go-git - Grep</title>
       <link>https://darkowlzz.github.io/post/git-grep/</link>
       <pubDate>Tue, 12 Dec 2017 18:39:02 +0530</pubDate>
       
@@ -23,7 +23,7 @@
     </item>
     
     <item>
-      <title>Git Clean</title>
+      <title>go-git - Clean</title>
       <link>https://darkowlzz.github.io/post/git-clean/</link>
       <pubDate>Tue, 12 Dec 2017 17:26:54 +0530</pubDate>
       
@@ -34,7 +34,7 @@ Since clean can be harmful if not used carefully, git wouldn&amp;rsquo;t just de
     </item>
     
     <item>
-      <title>Git Object Alternates</title>
+      <title>go-git - Object Alternates</title>
       <link>https://darkowlzz.github.io/post/git-object-alternates/</link>
       <pubDate>Mon, 11 Dec 2017 16:16:02 +0530</pubDate>
       
@@ -44,7 +44,7 @@ Git clone offers an option to clone a repo without actually copying the git obje
     </item>
     
     <item>
-      <title>Git Tag Signature Verification</title>
+      <title>go-git - Tag Signature Verification</title>
       <link>https://darkowlzz.github.io/post/git-tag-signature-verification/</link>
       <pubDate>Sat, 25 Nov 2017 18:51:26 +0530</pubDate>
       
@@ -54,7 +54,7 @@ Git clone offers an option to clone a repo without actually copying the git obje
     </item>
     
     <item>
-      <title>Git Commit Timestamp</title>
+      <title>go-git - Commit Timestamp</title>
       <link>https://darkowlzz.github.io/post/git-commit-timestamp/</link>
       <pubDate>Fri, 24 Nov 2017 16:24:40 +0530</pubDate>
       
@@ -65,7 +65,7 @@ ts := time.Unix(0000000000, 0) commit := &amp;amp;Commit{ Hash: plumbing.NewHash
     </item>
     
     <item>
-      <title>Git Commit Signature Verification</title>
+      <title>go-git - Commit Signature Verification</title>
       <link>https://darkowlzz.github.io/post/git-commit-signature-verification/</link>
       <pubDate>Thu, 23 Nov 2017 23:42:00 +0530</pubDate>
       
