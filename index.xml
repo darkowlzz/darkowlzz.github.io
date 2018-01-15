@@ -6,10 +6,22 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Dec 2017 23:06:59 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jan 2018 22:45:57 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lastpass Cli Helpers</title>
+      <link>https://darkowlzz.github.io/post/lastpass-cli-helpers/</link>
+      <pubDate>Mon, 15 Jan 2018 22:45:57 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/lastpass-cli-helpers/</guid>
+      <description>lpass is a lastpass cli client with a lot of subcommands and options to do a lot of things which are hard to remember. Based on my day-to-day usage of it, I created a set of bash functions to simplify the usage. An up-to-date version of the functions can be found here.
+There are four functions:
+lpget() to get the password of a given site.
+$ lpget google.com copied google.com secret to clipboard  lpuser() to get the username of a given site.</description>
+    </item>
     
     <item>
       <title>dep - Pin Executable Version</title>

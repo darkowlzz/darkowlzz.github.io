@@ -4,28 +4,35 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags | darkowlzz</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Lastpass Cli Helpers | darkowlzz</title>
+    <meta name="description" content="lpass is a lastpass cli client with a lot of subcommands and options to do a lot of things which are hard to remember. Based on my day-to-day usage of it, I created a set of bash functions to simplify the usage. An up-to-date version of the functions can be found here.
+There are four functions:
+lpget() to get the password of a given site.
+$ lpget google.com copied google.com secret to clipboard  lpuser() to get the username of a given site.">
+    <meta name="keywords" content="lastpass">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/tags/" />
+    <meta property="og:title" content="Lastpass Cli Helpers" />
+<meta property="og:description" content="lpass is a lastpass cli client with a lot of subcommands and options to do a lot of things which are hard to remember. Based on my day-to-day usage of it, I created a set of bash functions to simplify the usage. An up-to-date version of the functions can be found here.
+There are four functions:
+lpget() to get the password of a given site.
+$ lpget google.com copied google.com secret to clipboard  lpuser() to get the username of a given site." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/lastpass-cli-helpers/" />
 
 
 
-<meta property="og:updated_time" content="2017-07-05T17:30:54&#43;05:30"/>
+<meta property="article:published_time" content="2018-01-15T22:45:57&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-01-15T22:45:57&#43;05:30"/>
+
 
 
 
@@ -53,9 +60,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/tags/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/lastpass-cli-helpers/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -134,49 +139,138 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="" href="/"><span itemprop="name">Home</span></a>
-    
-      <a itemprop="url" class="" href="/about/me"><span itemprop="name">About</span></a>
-    
-  </nav>
-
-
 </header>
     <main>
-  <header>
-    <h1>Tags</h1>
-  </header>
-  <ul>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <li><a href="automation">automation</a> (1)
+<meta itemprop="name" content="Lastpass Cli Helpers">
+<meta itemprop="description" content="lpass is a lastpass cli client with a lot of subcommands and options to do a lot of things which are hard to remember. Based on my day-to-day usage of it, I created a set of bash functions to simplify the usage. An up-to-date version of the functions can be found here.
+There are four functions:
+lpget() to get the password of a given site.
+$ lpget google.com copied google.com secret to clipboard  lpuser() to get the username of a given site.">
+
+
+<meta itemprop="datePublished" content="2018-01-15T22:45:57&#43;05:30" />
+<meta itemprop="dateModified" content="2018-01-15T22:45:57&#43;05:30" />
+<meta itemprop="wordCount" content="151">
+
+
+
+<meta itemprop="keywords" content="lastpass," />
+
+    <header>
+      <h1 itemprop="headline">Lastpass Cli Helpers</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <circle cx="16" cy="16" r="14" />
+  <path d="M16 8 L16 16 20 20" />
+</svg>
+<span>1 minute read</span>
+<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+</svg>
+
+  Published: <time datetime="2018-01-15T22:45:57&#43;05:30">15 Jan, 2018</time>
+
+
+      </p>
+    </header>
     
-      <li><a href="dep">dep</a> (2)
     
-      <li><a href="git">git</a> (6)
+
+    <div itemprop="articleBody">
+      <p><a href="https://github.com/lastpass/lastpass-cli">lpass</a> is a lastpass cli client with
+a lot of subcommands and options to do a lot of things which are hard to
+remember. Based on my day-to-day usage of it, I created a set of bash functions
+to simplify the usage. An up-to-date version of the functions can be found
+<a href="https://github.com/darkowlzz/dotfiles/blob/master/bashfiles/lpass.bash">here</a>.</p>
+
+<p>There are four functions:</p>
+
+<p><code>lpget()</code> to get the password of a given site.</p>
+
+<pre><code>$ lpget google.com
+copied google.com secret to clipboard
+</code></pre>
+
+<p><code>lpuser()</code> to get the username of a given site.</p>
+
+<pre><code>$ lpget google.com
+</code></pre>
+
+<p><code>lpsearch()</code> to perform grep on all the sites in an account.</p>
+
+<pre><code>$ lpsearch google.com
+google.com [id:12345678]
+google.com-work [id:987654]
+</code></pre>
+
+<p><code>lpsg()</code> to perform search and get password of a given site.</p>
+
+<pre><code>$ lpsg google.com
+copied google.com secret to clipboard
+</code></pre>
+
+<p>When there are multiple sites with similar names:</p>
+
+<pre><code>$ lpsg google.com 2
+copied google.com-work secret to clipboard
+</code></pre>
+
+<p><code>lpsg</code> uses <code>lpget</code> and <code>lpsearch</code> to search and copy the required secret.</p>
+
+    </div>
     
-      <li><a href="go">go</a> (8)
+      <article>
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
-      <li><a href="go-git">go-git</a> (6)
     
-      <li><a href="golang">golang</a> (2)
     
-      <li><a href="helm">helm</a> (1)
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
     
-      <li><a href="k8s">k8s</a> (2)
+    <footer>
+      <hr>
+      <p>
+  Published
+  
     
-      <li><a href="lastpass">lastpass</a> (1)
+      by <span itemprop="author"></span>
     
-      <li><a href="minikube">minikube</a> (1)
-    
-      <li><a href="security">security</a> (1)
-    
-      <li><a href="travisci">travisci</a> (1)
-    
-  </ul>
+  
+  <time datetime="2018-01-15T22:45:57&#43;05:30">
+    15 Jan, 2018
+  </time>
+  
+  
+    and tagged <a href="/tags/lastpass/">lastpass</a>
+  
+  using <span itemprop="wordCount">151</span> words.
+</p>
+
+      
+
+
+
+    </footer>
+  </article>
 </main>
     <footer>
   
