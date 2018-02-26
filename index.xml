@@ -6,10 +6,20 @@
     <description>Recent content on darkowlzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2018 22:45:57 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 14:51:54 +0530</lastBuildDate>
     
 	<atom:link href="https://darkowlzz.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dep - Solve Errors</title>
+      <link>https://darkowlzz.github.io/post/dep-solve-errors/</link>
+      <pubDate>Mon, 26 Feb 2018 14:51:54 +0530</pubDate>
+      
+      <guid>https://darkowlzz.github.io/post/dep-solve-errors/</guid>
+      <description>dep seems to work great for those who are able to get it to work with their projects. But often, there are issues that a new dep user faces while trying out dep for the first time. The issues when dep fails to solve the dependency graph. When this happens, dep needs some help from the user to solve the issue.
+A lot of people find it hard to get started with dep when the very first command, dep init fails and they don&amp;rsquo;t know how do go ahead with that.</description>
+    </item>
     
     <item>
       <title>Lastpass Cli Helpers</title>

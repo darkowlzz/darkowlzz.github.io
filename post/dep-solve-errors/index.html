@@ -4,28 +4,31 @@
     <meta name="generator" content="Hugo 0.31.1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | darkowlzz</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>dep - Solve Errors | darkowlzz</title>
+    <meta name="description" content="dep seems to work great for those who are able to get it to work with their projects. But often, there are issues that a new dep user faces while trying out dep for the first time. The issues when dep fails to solve the dependency graph. When this happens, dep needs some help from the user to solve the issue.
+A lot of people find it hard to get started with dep when the very first command, dep init fails and they don&rsquo;t know how do go ahead with that.">
+    <meta name="keywords" content="dep, golang, go">
     
     
     
-    
-      <meta name="robots" content="noindex">
     
     
 
   <meta name="author" content="">
 
 
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://darkowlzz.github.io/post/" />
+    <meta property="og:title" content="dep - Solve Errors" />
+<meta property="og:description" content="dep seems to work great for those who are able to get it to work with their projects. But often, there are issues that a new dep user faces while trying out dep for the first time. The issues when dep fails to solve the dependency graph. When this happens, dep needs some help from the user to solve the issue.
+A lot of people find it hard to get started with dep when the very first command, dep init fails and they don&rsquo;t know how do go ahead with that." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://darkowlzz.github.io/post/dep-solve-errors/" />
 
 
 
-<meta property="og:updated_time" content="2017-07-26T22:09:57&#43;05:30"/>
+<meta property="article:published_time" content="2018-02-26T14:51:54&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-02-26T14:51:54&#43;05:30"/>
+
 
 
 
@@ -53,9 +56,7 @@ ga('send', 'pageview');
 <script async src='//www.google-analytics.com/analytics.js'></script>
 
     
-      <link href="https://darkowlzz.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="darkowlzz" />
-    
-    <link rel="canonical" href="https://darkowlzz.github.io/post/">
+    <link rel="canonical" href="https://darkowlzz.github.io/post/dep-solve-errors/">
     
     
     <link rel="icon" sizes="any" href="data:image/svg+xml,%3Csvg%20viewBox='0%200%2046%2045'%20xmlns='http://www.w3.org/2000/svg'%3E%3Ctitle%3EAfter%20Dark%3C/title%3E%3Cpath%20d='M.708%2045L23%20.416%2045.292%2045H.708zM35%2038L23%2019%2011%2038h24z'%20fill='%23000'/%3E%3C/svg%3E">
@@ -134,177 +135,252 @@ article [itemprop="description"] {
   
   <body class="hack dark main container">
     <header>
+  <a href="/">darkowlzz</a>
   
-  <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
-    
-    
-      <a itemprop="url" class="" href="/"><span itemprop="name">Home</span></a>
-    
-      <a itemprop="url" class="" href="/about/me"><span itemprop="name">About</span></a>
-    
-  </nav>
-
-
 </header>
     <main>
-  <header>
-    <h1>Posts</h1>
-  </header>
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/helm-chart-config-preview/">Helm Chart Config Preview</a>
-    </h2>
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+<meta itemprop="name" content="dep - Solve Errors">
+<meta itemprop="description" content="dep seems to work great for those who are able to get it to work with their projects. But often, there are issues that a new dep user faces while trying out dep for the first time. The issues when dep fails to solve the dependency graph. When this happens, dep needs some help from the user to solve the issue.
+A lot of people find it hard to get started with dep when the very first command, dep init fails and they don&rsquo;t know how do go ahead with that.">
+
+
+<meta itemprop="datePublished" content="2018-02-26T14:51:54&#43;05:30" />
+<meta itemprop="dateModified" content="2018-02-26T14:51:54&#43;05:30" />
+<meta itemprop="wordCount" content="986">
+
+
+
+<meta itemprop="keywords" content="dep,golang,go," />
+
+    <header>
+      <h1 itemprop="headline">dep - Solve Errors</h1>
+      <p class="muted">
+        <svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <circle cx="16" cy="16" r="14" />
   <path d="M16 8 L16 16 20 20" />
 </svg>
-<span>2 minute read</span>
+<span>5 minute read</span>
 <svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
   <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
 </svg>
 
-  Published: <time datetime="2017-07-26T22:09:57&#43;05:30">26 Jul, 2017</time>
+  Published: <time datetime="2018-02-26T14:51:54&#43;05:30">26 Feb, 2018</time>
 
+
+      </p>
+    </header>
+    
+    
+
+    <div itemprop="articleBody">
+      
+
+<p><a href="https://github.com/golang/dep"><code>dep</code></a> seems to work great for those who are
+able to get it to work with their projects. But often, there are issues that
+a new dep user faces while trying out dep for the first time. The issues when
+dep fails to solve the dependency graph. When this happens, dep needs some help
+from the user to solve the issue.</p>
+
+<p>A lot of people find it hard to get started with dep when the very first
+command, <code>dep init</code> fails and they don&rsquo;t know how do go ahead with that. <code>init</code>
+scans the project, collect all the project information and perform a solve to
+obtain a solution of the dependency graph. Once a solution of obtained, it
+writes out a manifest file(Gopkg.toml) and a lock file(Gopkg.lock). The lock
+file contains a complete solution of the dependency graph at a given time. The
+manifest contains flexible constraints based on the solution.</p>
+
+<p>An init solve failure error looks like this:</p>
+
+<pre><code>init failed: unable to solve the dependency graph: Solving failure: No versions of github.com/foo/exampleA met constraints:
+    v1.8.1: Could not introduce github.com/foo/exampleA@v1.8.1 due to multiple problematic subpackages:
+	Subpackage github.com/foo/exampleA/logger is missing. (Package is required by github.com/bar/exampleB@v23.1.)
+    v1.8.0: Could not introduce github.com/foo/exampleA@v1.8.0 due to multiple problematic subpackages:
+	Subpackage github.com/foo/exampleA/logger is missing. (Package is required by github.com/bar/exampleB@v23.1.)
+    ...
+</code></pre>
+
+<p>Here, dep is trying to tell what&rsquo;s the issue that is confusing it and it can&rsquo;t
+complete the solve. In a way, it&rsquo;s asking for some help. It could appear to
+be scary at the beginning, and the error message could be very cryptic.</p>
+
+<p>A closer look at the errors and the projects could help in better understanding
+the issue. This example is taken from a real issue that was reported. So,
+<code>github.com/bar/exampleB</code> at version v23.1 depends on <code>github.com/foo/exampleA</code>
+by importing <code>github.com/foo/exampleA/logger</code>. But package <code>logger</code> seems to be
+missing from <code>foo/exampleA</code> project at version v1.8.1.</p>
+
+<p>dep has the nature of prefering semver releases and it looks at the latest
+semver release of a project and then goes down the releases to find the version
+that satisfied the requirement. In this case, v1.8.1 is the latest release of
+project <code>github.com/foo/exampleA</code>. Since <code>bar/exampleB</code> needs something that&rsquo;s
+not in <code>foo/exampleA</code>&rsquo;s latest release, means that maybe <code>bar/exampleB</code> depends
+on some newer, unreleased version of <code>foo/exampleA</code> or maybe some old version
+that had the required package. dep would check all the versions, including
+branches to find a compatible version of <code>foo/exampleA</code>. If it can&rsquo;t find any,
+it would fail.</p>
+
+<p>Since dep checks against all the versions and branches, a failure means that the
+package &ldquo;logger&rdquo; doesn&rsquo;t exist in any of the releases or branches. Maybe it was
+in some branch at some point in time, but some new commits have removed it. One
+way to solve this would be to get a newer version of <code>github.com/bar/exampleB</code>
+that&rsquo;s compatible with a proper release of <code>github.com/foo/exampleA</code>. Lets say,
+master branch of <code>github.com/bar/exampleB</code> is in development and seems to be
+working with the new releases of <code>foo/exampleA</code>. To tell dep to use the master
+branch of <code>bar/exampleB</code>, create a <code>Gopkg.toml</code> file at the root of your main
+project and add:</p>
+
+<pre><code>[[constraint]]
+  name = &quot;github.com/bar/exampleB&quot;
+  branch = &quot;master&quot;
+</code></pre>
+
+<p>With this, the manifest file is manually created. Running <code>dep init</code> would fail
+because a manifest already exists. So, run <code>dep ensure</code> and dep would read the
+manifest and know which version of <code>bar/exampleB</code> to use. If everything remains
+well, the solve would complete and a lock file would be generated. If not, some
+more errors similar to previous solve errors would show up and they could be
+dealt with in the same way, by telling dep which version of the project to use.</p>
+
+<p>The above case is an example of how to troubleshoot when there&rsquo;s a solve
+failure. If all the projects maintain proper releases there shouldn&rsquo;t be such
+issues. In case of <code>github.com/bar/exampleB</code>, a new release of the project that
+depends on new version of <code>github.com/foo/exampleA</code> would also solve the issue.</p>
+
+<p>Another type of solve error looks like this:</p>
+
+<pre><code>✗   github.com/foo/exampleA@v0.0.5 not allowed by constraint master
+    master from (root)
+</code></pre>
+
+<p>This means that dep checking if version v0.0.5 of foo/example is compatible with
+the main project, but the root project (main project) has defined a constraint
+for <code>foo/example</code> to use &ldquo;master&rdquo; branch. This can again be tuned according to
+the needs in the Gopkg.toml file, and help dep in deciding which version to use.</p>
+
+<h2 id="dep-hash-inputs">dep hash-inputs</h2>
+
+<p>There&rsquo;s a hidden tool in dep that can help in debugging the issues when dep
+behaves in an unexpected way. Let&rsquo;s say the main project is
+<code>github.com/foo/projectA</code>. And in the project, there&rsquo;s say, package &ldquo;foo&rdquo;, that
+imports package &ldquo;bar&rdquo; of the same project. The import path would be
+<code>github.com/foo/projectA/bar</code>. If for some reason, the project in the development
+machine has the name of the project parent directory as &ldquo;Foo&rdquo; instead of &ldquo;foo&rdquo;.
+The project path is <code>github.com/Foo/projectA</code>. Running dep with this setup would
+confuse dep.</p>
+
+<p>The solve error would contain error lines about unable to find
+<code>github.com/Foo/projectA</code>. Usually, dep would ignore the main project. But in this
+case, due to the issue in the directory name, dep would not ignore it and try to
+find the project and fail.</p>
+
+<p>This wouldn&rsquo;t be apparent for someone who hasn&rsquo;t faced this issue. I recommend
+using <code>dep hash-inputs</code> to see what is dep able to see in the project. These
+are the inputs that are used by dep to perform a solve and come up with a
+complete dependency graph.</p>
+
+<p>An example hash-inputs result would be:</p>
+
+<pre><code>$ dep hash-inputs
+-CONSTRAINTS-
+-IMPORTS/REQS-
+github.com/bar/exampleB
+github.com/foo/exampleA/common
+github.com/foo/exampleA/common/hexutil
+github.com/foo/exampleA/common/math
+gopkg.in/redis.v3
+-IGNORES-
+-OVERRIDES-
+-ANALYZER-
+dep
+1
+
+</code></pre>
+
+<p>If the main project is seen in the above list, it&rsquo;s clear that something is
+wrong with the import paths or the project directory organization.
+hash-inputs can only be generated when there&rsquo;s a manifest file. Even an empty
+Gopkg.toml file is enough to generate hash-inputs results.</p>
+
+<p>More details about the failures in dep could be found at <a href="https://golang.github.io/dep/docs/failure-modes.html">https://golang.github.io/dep/docs/failure-modes.html</a>.</p>
+
+    </div>
+    
+      <article>
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "darkowlzz-space" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </article>
+    
+    <footer>
+      <hr>
+      <p>
+  Published
+  
+    
+      by <span itemprop="author"></span>
+    
+  
+  <time datetime="2018-02-26T14:51:54&#43;05:30">
+    26 Feb, 2018
+  </time>
+  
+  
+    and tagged <a href="/tags/dep/">dep</a>, <a href="/tags/go/">go</a> and <a href="/tags/golang/">golang</a>
+  
+  using <span itemprop="wordCount">986</span> words.
 </p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Helm is a kubernetes(k8s) package manager and it enables downloading k8s charts and installing them in k8s cluster. Charts are configured with default values, which can be customized before installation.
-helm inspect [chart] shows the Chart.yaml and values.yaml content of a given chart. The configurations are stored in values.yaml and heml inspect values [chart] shows only the content of values.yaml.
-values.yaml of mariadb chart: --- image: bitnami/mariadb:10.1.23-r2 ## Specify an imagePullPolicy (Required) imagePullPolicy: IfNotPresent ## Specify password for root user # mariadbRootPassword: ## Create a database user # mariadbUser: # mariadbPassword: ## Create a database # mariadbDatabase: .
-  </div>
-  
-    <p><a itemprop="url" href="/post/helm-chart-config-preview/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-26T22:09:57&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-26T22:09:57&#43;05:30">
-  
-</article>
 
+      
   
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/minikube-config/">Minikube Config</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>2 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
 
-  Published: <time datetime="2017-07-24T13:48:53&#43;05:30">24 Jul, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Minikube is a kubernetes(k8s) project to enable running single node k8s cluster locally inside a VM, which can be used by developers to prepare their apps for k8s in development phase. For more info, refer their github project.
-Minikube starts with some sane default VM configs for any modern machine.
-DefaultMemory = 2048 DefaultCPUS = 2 DefaultDiskSize = &quot;20g&quot; MinimumDiskSizeMB = 2000 DefaultVMDriver = &quot;virtualbox&quot;  Which is fine for most of the time.
-  </div>
-  
-    <p><a itemprop="url" href="/post/minikube-config/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-24T13:48:53&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-24T13:48:53&#43;05:30">
-  
-</article>
 
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/securing-custom-deployments-via-travis-ci/">Securing Custom Deployments via Travis CI</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>3 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
+  <aside>
+    <header>Related Content</header>
+    <ul>
+      
+      
+        <li><a href="/post/dep-pin-executable-version/">dep - Pin Executable Version</a> &ndash; 2 minutes
+      
+        <li><a href="/post/dep-picking-version-from-gopath/">dep - Picking Version From GOPATH</a> &ndash; 2 minutes
+      
+        <li><a href="/post/git-grep/">go-git - Grep</a> &ndash; 3 minutes
+      
+        <li><a href="/post/git-clean/">go-git - Clean</a> &ndash; 2 minutes
+      
+        <li><a href="/post/git-object-alternates/">go-git - Object Alternates</a> &ndash; 2 minutes
+      
+        <li><a href="/post/git-tag-signature-verification/">go-git - Tag Signature Verification</a> &ndash; 3 minutes
+      
+        <li><a href="/post/git-commit-timestamp/">go-git - Commit Timestamp</a> &ndash; 2 minutes
+      
+    </ul>
+  </aside>
 
-  Published: <time datetime="2017-07-05T17:30:54&#43;05:30">5 Jul, 2017</time>
 
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    Custom Deployment Encrypted Secrets in Build Environment Limiting Deployments From Specific Branches  Travis CI - Test and Deploy with Confidence. DEPLOY. D E P L O Y.
-Travis CI can be used as a publicly hosted deployment system with inbuilt support for deployments to various providers. There are well documented guides about doing the same. But once in a while, one might end up using some service that&rsquo;s not supported by Travis CI or even a specific feature that&rsquo;s not supported, although there&rsquo;s support for the provider.
-  </div>
-  
-    <p><a itemprop="url" href="/post/securing-custom-deployments-via-travis-ci/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-07-05T17:30:54&#43;05:30">
-  <meta itemprop="dateModified" content="2017-07-05T17:30:54&#43;05:30">
-  
-</article>
-
-  
-    <article itemscope itemtype="http://schema.org/CreativeWork">
-  <header>
-    <h2 itemprop="name">
-      <a href="/post/learning-hugo/">Learning Hugo</a>
-    </h2>
-    
-      <p class="muted"><svg style="margin-bottom:-3px" class="i-clock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <circle cx="16" cy="16" r="14" />
-  <path d="M16 8 L16 16 20 20" />
-</svg>
-<span>1 minute read</span>
-<svg style="margin-bottom: -3px" class="i-edit" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
-  <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
-</svg>
-
-  Published: <time datetime="2017-06-28T16:53:59&#43;05:30">28 Jun, 2017</time>
-
-</p>
-    
-  </header>
-  
-  <div itemprop="description">
-    This site is just a playground to learn hugo, how it works and the workflow. Also, since the generated site is just a collection of static web pages, this site is hosted on github as github pages and gets automatically deployed at every commit to the master branch.
-The hugo project for this site is at the source branch. Every commit to this branch triggers a travis build, where the new pages are generated and with some custom deployment shell commands, the generated pages are committed to master branch.
-  </div>
-  
-    <p><a itemprop="url" href="/post/learning-hugo/">Read More&nbsp;&raquo;</a></p>
-  
-  <meta itemprop="inLanguage" content="en-us">
-  <meta itemprop="datePublished" content="2017-06-28T16:53:59&#43;05:30">
-  <meta itemprop="dateModified" content="2017-06-28T16:53:59&#43;05:30">
-  
-</article>
-
-  
+    </footer>
+  </article>
 </main>
     <footer>
-  <nav>
-  <p>
-    
-      <a href="/post/">&laquo; Previous</a> |
-    
-    <span>Page 2 of 2</span>
-    
-  </p>
-</nav>
-
   
   <p class="muted">
     This page was generated using
